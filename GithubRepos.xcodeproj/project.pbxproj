@@ -29,6 +29,16 @@
 		BB6D58B927DCC57700C96487 /* GithubTarget+StubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58B827DCC57700C96487 /* GithubTarget+StubData.swift */; };
 		BB6D58BB27DCC59E00C96487 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58BA27DCC59E00C96487 /* APIConstant.swift */; };
 		BB6D58BD27DCC5B700C96487 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58BC27DCC5B700C96487 /* APIEnvironment.swift */; };
+		BB6D58BF27DCD30600C96487 /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58BE27DCD30600C96487 /* GithubRepository.swift */; };
+		BB6D58C127DCD34C00C96487 /* GithubRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58C027DCD34C00C96487 /* GithubRepositoryType.swift */; };
+		BB6D58C527DCD66700C96487 /* ReposRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58C427DCD66700C96487 /* ReposRequestDTO.swift */; };
+		BB6D58C727DCD68300C96487 /* UserReposRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58C627DCD68300C96487 /* UserReposRequestDTO.swift */; };
+		BB6D58C927DCD70E00C96487 /* ReposResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58C827DCD70E00C96487 /* ReposResponseDTO.swift */; };
+		BB6D58CB27DCD72000C96487 /* UserReposResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58CA27DCD72000C96487 /* UserReposResponseDTO.swift */; };
+		BB6D58CD27DCD73E00C96487 /* UserInfoResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58CC27DCD73E00C96487 /* UserInfoResponseDTO.swift */; };
+		BB6D58CF27DCDE0800C96487 /* ReposQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58CE27DCDE0800C96487 /* ReposQuery.swift */; };
+		BB6D58D127DCDEDC00C96487 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58D027DCDEDC00C96487 /* UserInfo.swift */; };
+		BB6D58D327DCDEE500C96487 /* Repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58D227DCDEE500C96487 /* Repos.swift */; };
 		BBFA000027DB871B00897CEE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAFFFF27DB871B00897CEE /* Coordinator.swift */; };
 		BBFA000227DB872700897CEE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000127DB872700897CEE /* AppCoordinator.swift */; };
 		BBFA000427DB873E00897CEE /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */; };
@@ -82,6 +92,16 @@
 		BB6D58B827DCC57700C96487 /* GithubTarget+StubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GithubTarget+StubData.swift"; sourceTree = "<group>"; };
 		BB6D58BA27DCC59E00C96487 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		BB6D58BC27DCC5B700C96487 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
+		BB6D58BE27DCD30600C96487 /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
+		BB6D58C027DCD34C00C96487 /* GithubRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositoryType.swift; sourceTree = "<group>"; };
+		BB6D58C427DCD66700C96487 /* ReposRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposRequestDTO.swift; sourceTree = "<group>"; };
+		BB6D58C627DCD68300C96487 /* UserReposRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReposRequestDTO.swift; sourceTree = "<group>"; };
+		BB6D58C827DCD70E00C96487 /* ReposResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposResponseDTO.swift; sourceTree = "<group>"; };
+		BB6D58CA27DCD72000C96487 /* UserReposResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReposResponseDTO.swift; sourceTree = "<group>"; };
+		BB6D58CC27DCD73E00C96487 /* UserInfoResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponseDTO.swift; sourceTree = "<group>"; };
+		BB6D58CE27DCDE0800C96487 /* ReposQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposQuery.swift; sourceTree = "<group>"; };
+		BB6D58D027DCDEDC00C96487 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		BB6D58D227DCDEE500C96487 /* Repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repos.swift; sourceTree = "<group>"; };
 		BBFA000127DB872700897CEE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		BBFAFFC827DB813F00897CEE /* GithubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +226,25 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		BB6D58C227DCD61400C96487 /* RequestDTO */ = {
+			isa = PBXGroup;
+			children = (
+				BB6D58C427DCD66700C96487 /* ReposRequestDTO.swift */,
+				BB6D58C627DCD68300C96487 /* UserReposRequestDTO.swift */,
+			);
+			path = RequestDTO;
+			sourceTree = "<group>";
+		};
+		BB6D58C327DCD62100C96487 /* ResponseDTO */ = {
+			isa = PBXGroup;
+			children = (
+				BB6D58C827DCD70E00C96487 /* ReposResponseDTO.swift */,
+				BB6D58CA27DCD72000C96487 /* UserReposResponseDTO.swift */,
+				BB6D58CC27DCD73E00C96487 /* UserInfoResponseDTO.swift */,
+			);
+			path = ResponseDTO;
+			sourceTree = "<group>";
+		};
 		BBFA000527DB874A00897CEE /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +335,7 @@
 		BBFA000E27DB8E7600897CEE /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				BB6D58C027DCD34C00C96487 /* GithubRepositoryType.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -310,6 +350,9 @@
 		BBFA001027DB8E8400897CEE /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				BB6D58CE27DCDE0800C96487 /* ReposQuery.swift */,
+				BB6D58D027DCDEDC00C96487 /* UserInfo.swift */,
+				BB6D58D227DCDEE500C96487 /* Repos.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -317,6 +360,8 @@
 		BBFA001127DB917C00897CEE /* DataMapping */ = {
 			isa = PBXGroup;
 			children = (
+				BB6D58C227DCD61400C96487 /* RequestDTO */,
+				BB6D58C327DCD62100C96487 /* ResponseDTO */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -324,6 +369,7 @@
 		BBFA001227DB918900897CEE /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				BB6D58BE27DCD30600C96487 /* GithubRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -572,24 +618,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB6D58C127DCD34C00C96487 /* GithubRepositoryType.swift in Sources */,
 				BBFA000227DB872700897CEE /* AppCoordinator.swift in Sources */,
 				BBFAFFD027DB813F00897CEE /* SearchViewController.swift in Sources */,
 				BB6D58BB27DCC59E00C96487 /* APIConstant.swift in Sources */,
 				BB6D58A627DC796D00C96487 /* AppFont.swift in Sources */,
 				BB6D58BD27DCC5B700C96487 /* APIEnvironment.swift in Sources */,
+				BB6D58CB27DCD72000C96487 /* UserReposResponseDTO.swift in Sources */,
+				BB6D58CD27DCD73E00C96487 /* UserInfoResponseDTO.swift in Sources */,
+				BB6D58D327DCDEE500C96487 /* Repos.swift in Sources */,
 				BB6D589327DC5E9B00C96487 /* ProfileViewController.swift in Sources */,
 				BB6D589C27DC74B900C96487 /* GithubTarget.swift in Sources */,
+				BB6D58C927DCD70E00C96487 /* ReposResponseDTO.swift in Sources */,
 				BB6D588D27DC5AC400C96487 /* TabBarCoordinator.swift in Sources */,
+				BB6D58D127DCDEDC00C96487 /* UserInfo.swift in Sources */,
 				BB6D58A027DC77BE00C96487 /* AppColor.swift in Sources */,
 				BB6D58B727DC7E3700C96487 /* UIFont+Ex.swift in Sources */,
+				BB6D58CF27DCDE0800C96487 /* ReposQuery.swift in Sources */,
 				BBFA000427DB873E00897CEE /* CoordinatorDelegate.swift in Sources */,
 				BBFAFFCC27DB813F00897CEE /* AppDelegate.swift in Sources */,
+				BB6D58BF27DCD30600C96487 /* GithubRepository.swift in Sources */,
 				BB6D589127DC5CB100C96487 /* TabBarPageCase.swift in Sources */,
+				BB6D58C527DCD66700C96487 /* ReposRequestDTO.swift in Sources */,
 				BBFA000027DB871B00897CEE /* Coordinator.swift in Sources */,
 				BBFAFFCE27DB813F00897CEE /* SceneDelegate.swift in Sources */,
 				BB6D58B527DC7E2C00C96487 /* UIColor+Ex.swift in Sources */,
 				BB6D589E27DC754F00C96487 /* GithubTabBarViewController.swift in Sources */,
 				BBFAFFFD27DB86E700897CEE /* AppAppearance.swift in Sources */,
+				BB6D58C727DCD68300C96487 /* UserReposRequestDTO.swift in Sources */,
 				BB6D58B927DCC57700C96487 /* GithubTarget+StubData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
