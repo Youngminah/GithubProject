@@ -63,12 +63,26 @@ final class TabBarCoordinator: Coordinator {
     private func createTabViewController(of page: TabBarPageCase) -> UIViewController {
         switch page {
         case .search:
-            let vc = SearchViewController()
+            let vc = SearchViewController(
+                viewModel: SearchViewModel(
+                    coordinator: self,
+                    useCase: SearchUseCase(
+                        githubRepository: GithubRepository()
+                    )
+                )
+            )
             vc.tabBarItem = self.configureTabBarItem(of: .search)
             vc.tabBarItem.selectedImage = UIImage(systemName: page.tabSelectedIconName())
             return vc
         case .profile:
-            let vc = ProfileViewController()
+            let vc = ProfileViewController(
+                viewModel: ProfileViewModel(
+                    coordinator: self,
+                    useCase: ProfileUseCase(
+                        githubRepository: GithubRepository()
+                    )
+                )
+            )
             vc.tabBarItem = self.configureTabBarItem(of: .profile)
             vc.tabBarItem.selectedImage = UIImage(systemName: page.tabSelectedIconName())
             return vc
@@ -79,10 +93,6 @@ final class TabBarCoordinator: Coordinator {
 extension TabBarCoordinator: CoordinatorDelegate {
 
     func didFinish(childCoordinator: Coordinator) {
-//        self.childCoordinators = childCoordinators.filter({ $0.type != childCoordinator.type })
-//        if childCoordinator.type == .tab {
-//            self.navigationController.viewControllers.removeAll()
-//            self.delegate?.didFinish(childCoordinator: self)
-//        }
+        self.delegate?.didFinish(childCoordinator: self)
     }
 }
