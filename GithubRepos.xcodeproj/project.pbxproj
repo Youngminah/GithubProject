@@ -39,6 +39,16 @@
 		BB6D58CF27DCDE0800C96487 /* ReposQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58CE27DCDE0800C96487 /* ReposQuery.swift */; };
 		BB6D58D127DCDEDC00C96487 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58D027DCDEDC00C96487 /* UserInfo.swift */; };
 		BB6D58D327DCDEE500C96487 /* Repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58D227DCDEE500C96487 /* Repos.swift */; };
+		BB6D58D527DCEB8100C96487 /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58D427DCEB8100C96487 /* SearchUseCase.swift */; };
+		BB6D58D727DCEBA300C96487 /* ProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58D627DCEBA300C96487 /* ProfileUseCase.swift */; };
+		BB6D58D927DCFA0E00C96487 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58D827DCFA0E00C96487 /* SearchViewModel.swift */; };
+		BB6D58DB27DCFA1800C96487 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58DA27DCFA1800C96487 /* ProfileViewModel.swift */; };
+		BB6D58DE27DCFA6500C96487 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58DD27DCFA6500C96487 /* AuthViewModel.swift */; };
+		BB6D58E127DCFA8800C96487 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58E027DCFA8700C96487 /* ViewModelType.swift */; };
+		BB6D58E327DCFB3100C96487 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58E227DCFB3100C96487 /* AuthUseCase.swift */; };
+		BB6D58E727DCFC6900C96487 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58E627DCFC6900C96487 /* BaseViewController.swift */; };
+		BB6D58E927DCFC7400C96487 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58E827DCFC7400C96487 /* BaseTableViewCell.swift */; };
+		BB6D58EB27DCFC8100C96487 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58EA27DCFC8100C96487 /* BaseCollectionViewCell.swift */; };
 		BBFA000027DB871B00897CEE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAFFFF27DB871B00897CEE /* Coordinator.swift */; };
 		BBFA000227DB872700897CEE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000127DB872700897CEE /* AppCoordinator.swift */; };
 		BBFA000427DB873E00897CEE /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */; };
@@ -102,6 +112,16 @@
 		BB6D58CE27DCDE0800C96487 /* ReposQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposQuery.swift; sourceTree = "<group>"; };
 		BB6D58D027DCDEDC00C96487 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		BB6D58D227DCDEE500C96487 /* Repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repos.swift; sourceTree = "<group>"; };
+		BB6D58D427DCEB8100C96487 /* SearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
+		BB6D58D627DCEBA300C96487 /* ProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCase.swift; sourceTree = "<group>"; };
+		BB6D58D827DCFA0E00C96487 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		BB6D58DA27DCFA1800C96487 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		BB6D58DD27DCFA6500C96487 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		BB6D58E027DCFA8700C96487 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		BB6D58E227DCFB3100C96487 /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
+		BB6D58E627DCFC6900C96487 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BB6D58E827DCFC7400C96487 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		BB6D58EA27DCFC8100C96487 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		BBFA000127DB872700897CEE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		BBFAFFC827DB813F00897CEE /* GithubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,10 +175,9 @@
 		BB6D588A27DC5A1E00C96487 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				BB6D589D27DC754F00C96487 /* GithubTabBarViewController.swift */,
 				BB6D588B27DC5A3300C96487 /* Coordinator */,
-				BBFA001327DB91A400897CEE /* Search */,
-				BBFA001427DB91E500897CEE /* Profile */,
+				BB6D58DC27DCFA3200C96487 /* View */,
+				BB6D58A227DC786A00C96487 /* ViewModel */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -187,32 +206,13 @@
 			path = Case;
 			sourceTree = "<group>";
 		};
-		BB6D58A127DC786200C96487 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BBFAFFCF27DB813F00897CEE /* SearchViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		BB6D58A227DC786A00C96487 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		BB6D58A327DC786F00C96487 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BB6D589227DC5E9B00C96487 /* ProfileViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BB6D58A427DC787300C96487 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
+				BB6D58DF27DCFA7800C96487 /* Protocol */,
+				BB6D58DD27DCFA6500C96487 /* AuthViewModel.swift */,
+				BB6D58D827DCFA0E00C96487 /* SearchViewModel.swift */,
+				BB6D58DA27DCFA1800C96487 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -243,6 +243,43 @@
 				BB6D58CC27DCD73E00C96487 /* UserInfoResponseDTO.swift */,
 			);
 			path = ResponseDTO;
+			sourceTree = "<group>";
+		};
+		BB6D58DC27DCFA3200C96487 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB6D58E427DCFC2500C96487 /* CustomView */,
+				BB6D589D27DC754F00C96487 /* GithubTabBarViewController.swift */,
+				BBFAFFCF27DB813F00897CEE /* SearchViewController.swift */,
+				BB6D589227DC5E9B00C96487 /* ProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB6D58DF27DCFA7800C96487 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BB6D58E027DCFA8700C96487 /* ViewModelType.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		BB6D58E427DCFC2500C96487 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				BB6D58E527DCFC3400C96487 /* BaseView */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		BB6D58E527DCFC3400C96487 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				BB6D58E627DCFC6900C96487 /* BaseViewController.swift */,
+				BB6D58E827DCFC7400C96487 /* BaseTableViewCell.swift */,
+				BB6D58EA27DCFC8100C96487 /* BaseCollectionViewCell.swift */,
+			);
+			path = BaseView;
 			sourceTree = "<group>";
 		};
 		BBFA000527DB874A00897CEE /* Coordinator */ = {
@@ -343,6 +380,9 @@
 		BBFA000F27DB8E7D00897CEE /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				BB6D58E227DCFB3100C96487 /* AuthUseCase.swift */,
+				BB6D58D427DCEB8100C96487 /* SearchUseCase.swift */,
+				BB6D58D627DCEBA300C96487 /* ProfileUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -372,24 +412,6 @@
 				BB6D58BE27DCD30600C96487 /* GithubRepository.swift */,
 			);
 			path = Repository;
-			sourceTree = "<group>";
-		};
-		BBFA001327DB91A400897CEE /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				BB6D58A227DC786A00C96487 /* ViewModel */,
-				BB6D58A127DC786200C96487 /* View */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		BBFA001427DB91E500897CEE /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				BB6D58A427DC787300C96487 /* ViewModel */,
-				BB6D58A327DC786F00C96487 /* View */,
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		BBFAFFBF27DB813F00897CEE = {
@@ -623,26 +645,36 @@
 				BBFAFFD027DB813F00897CEE /* SearchViewController.swift in Sources */,
 				BB6D58BB27DCC59E00C96487 /* APIConstant.swift in Sources */,
 				BB6D58A627DC796D00C96487 /* AppFont.swift in Sources */,
+				BB6D58D527DCEB8100C96487 /* SearchUseCase.swift in Sources */,
 				BB6D58BD27DCC5B700C96487 /* APIEnvironment.swift in Sources */,
 				BB6D58CB27DCD72000C96487 /* UserReposResponseDTO.swift in Sources */,
 				BB6D58CD27DCD73E00C96487 /* UserInfoResponseDTO.swift in Sources */,
 				BB6D58D327DCDEE500C96487 /* Repos.swift in Sources */,
 				BB6D589327DC5E9B00C96487 /* ProfileViewController.swift in Sources */,
+				BB6D58EB27DCFC8100C96487 /* BaseCollectionViewCell.swift in Sources */,
+				BB6D58E727DCFC6900C96487 /* BaseViewController.swift in Sources */,
 				BB6D589C27DC74B900C96487 /* GithubTarget.swift in Sources */,
 				BB6D58C927DCD70E00C96487 /* ReposResponseDTO.swift in Sources */,
+				BB6D58E127DCFA8800C96487 /* ViewModelType.swift in Sources */,
 				BB6D588D27DC5AC400C96487 /* TabBarCoordinator.swift in Sources */,
+				BB6D58D727DCEBA300C96487 /* ProfileUseCase.swift in Sources */,
 				BB6D58D127DCDEDC00C96487 /* UserInfo.swift in Sources */,
 				BB6D58A027DC77BE00C96487 /* AppColor.swift in Sources */,
 				BB6D58B727DC7E3700C96487 /* UIFont+Ex.swift in Sources */,
+				BB6D58DB27DCFA1800C96487 /* ProfileViewModel.swift in Sources */,
+				BB6D58D927DCFA0E00C96487 /* SearchViewModel.swift in Sources */,
+				BB6D58E927DCFC7400C96487 /* BaseTableViewCell.swift in Sources */,
 				BB6D58CF27DCDE0800C96487 /* ReposQuery.swift in Sources */,
 				BBFA000427DB873E00897CEE /* CoordinatorDelegate.swift in Sources */,
 				BBFAFFCC27DB813F00897CEE /* AppDelegate.swift in Sources */,
 				BB6D58BF27DCD30600C96487 /* GithubRepository.swift in Sources */,
+				BB6D58DE27DCFA6500C96487 /* AuthViewModel.swift in Sources */,
 				BB6D589127DC5CB100C96487 /* TabBarPageCase.swift in Sources */,
 				BB6D58C527DCD66700C96487 /* ReposRequestDTO.swift in Sources */,
 				BBFA000027DB871B00897CEE /* Coordinator.swift in Sources */,
 				BBFAFFCE27DB813F00897CEE /* SceneDelegate.swift in Sources */,
 				BB6D58B527DC7E2C00C96487 /* UIColor+Ex.swift in Sources */,
+				BB6D58E327DCFB3100C96487 /* AuthUseCase.swift in Sources */,
 				BB6D589E27DC754F00C96487 /* GithubTabBarViewController.swift in Sources */,
 				BBFAFFFD27DB86E700897CEE /* AppAppearance.swift in Sources */,
 				BB6D58C727DCD68300C96487 /* UserReposRequestDTO.swift in Sources */,
