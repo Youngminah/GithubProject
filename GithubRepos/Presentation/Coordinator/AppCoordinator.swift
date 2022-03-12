@@ -16,18 +16,18 @@ final class AppCoordinator: Coordinator {
 
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
-        navigationController.setNavigationBarHidden(true, animated: false)
+        navigationController.setNavigationBarHidden(false, animated: false)
     }
 
     func start() {
-        connectInvestFlow()
+        connectTabBarFlow()
     }
 
-    private func connectInvestFlow() {
-//        let investCoordinator = InvestCoordinator(self.navigationController)
-//        investCoordinator.delegate = self
-//        investCoordinator.start()
-//        childCoordinators.append(investCoordinator)
+    private func connectTabBarFlow() {
+        let tabBarCoordinator = TabBarCoordinator(self.navigationController)
+        tabBarCoordinator.delegate = self
+        tabBarCoordinator.start()
+        childCoordinators.append(tabBarCoordinator)
     }
 }
 

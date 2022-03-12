@@ -8,7 +8,7 @@
 import UIKit
 
 enum CoordinatorStyleCase {
-    case app, invest
+    case app, tab
 }
 
 protocol Coordinator: AnyObject {
