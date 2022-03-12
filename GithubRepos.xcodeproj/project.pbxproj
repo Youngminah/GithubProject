@@ -8,19 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		BB6D588927DC596200C96487 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = BB6D588827DC596200C96487 /* Toast */; };
+		BB6D588D27DC5AC400C96487 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D588C27DC5AC400C96487 /* TabBarCoordinator.swift */; };
+		BB6D589127DC5CB100C96487 /* TabBarPageCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D589027DC5CB100C96487 /* TabBarPageCase.swift */; };
+		BB6D589327DC5E9B00C96487 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D589227DC5E9B00C96487 /* ProfileViewController.swift */; };
+		BB6D589627DC6EC100C96487 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BB6D589527DC6EC100C96487 /* RxCocoa */; };
+		BB6D589827DC6EC100C96487 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = BB6D589727DC6EC100C96487 /* RxRelay */; };
+		BB6D589A27DC6EC100C96487 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BB6D589927DC6EC100C96487 /* RxSwift */; };
+		BB6D589C27DC74B900C96487 /* GithubTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D589B27DC74B900C96487 /* GithubTarget.swift */; };
+		BB6D589E27DC754F00C96487 /* GithubTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D589D27DC754F00C96487 /* GithubTabBarViewController.swift */; };
+		BB6D58A027DC77BE00C96487 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D589F27DC77BE00C96487 /* AppColor.swift */; };
+		BB6D58A627DC796D00C96487 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58A527DC796D00C96487 /* AppFont.swift */; };
+		BB6D58AD27DC7B4C00C96487 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D58A727DC7B4C00C96487 /* NotoSansKR-Black.otf */; };
+		BB6D58AE27DC7B4C00C96487 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D58A827DC7B4C00C96487 /* NotoSansKR-Regular.otf */; };
+		BB6D58AF27DC7B4C00C96487 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D58A927DC7B4C00C96487 /* NotoSansKR-Medium.otf */; };
+		BB6D58B027DC7B4C00C96487 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D58AA27DC7B4C00C96487 /* NotoSansKR-Light.otf */; };
+		BB6D58B127DC7B4C00C96487 /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D58AB27DC7B4C00C96487 /* NotoSansKR-Thin.otf */; };
+		BB6D58B227DC7B4C00C96487 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D58AC27DC7B4C00C96487 /* NotoSansKR-Bold.otf */; };
+		BB6D58B527DC7E2C00C96487 /* UIColor+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58B427DC7E2C00C96487 /* UIColor+Ex.swift */; };
+		BB6D58B727DC7E3700C96487 /* UIFont+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58B627DC7E3700C96487 /* UIFont+Ex.swift */; };
 		BBFA000027DB871B00897CEE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAFFFF27DB871B00897CEE /* Coordinator.swift */; };
 		BBFA000227DB872700897CEE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000127DB872700897CEE /* AppCoordinator.swift */; };
 		BBFA000427DB873E00897CEE /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */; };
 		BBFA001727DBA99600897CEE /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = BBFA001627DBA99600897CEE /* RxDataSources */; };
-		BBFA001A27DBA9D800897CEE /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BBFA001927DBA9D800897CEE /* RxCocoa */; };
-		BBFA001C27DBA9D800897CEE /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = BBFA001B27DBA9D800897CEE /* RxRelay */; };
-		BBFA001E27DBA9D800897CEE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BBFA001D27DBA9D800897CEE /* RxSwift */; };
-		BBFA002027DBA9D800897CEE /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = BBFA001F27DBA9D800897CEE /* RxTest */; };
 		BBFA002327DBABCB00897CEE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BBFA002227DBABCB00897CEE /* SnapKit */; };
 		BBFA002627DBABE400897CEE /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = BBFA002527DBABE400897CEE /* Moya */; };
 		BBFAFFCC27DB813F00897CEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAFFCB27DB813F00897CEE /* AppDelegate.swift */; };
 		BBFAFFCE27DB813F00897CEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAFFCD27DB813F00897CEE /* SceneDelegate.swift */; };
-		BBFAFFD027DB813F00897CEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAFFCF27DB813F00897CEE /* ViewController.swift */; };
+		BBFAFFD027DB813F00897CEE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAFFCF27DB813F00897CEE /* SearchViewController.swift */; };
 		BBFAFFD527DB814100897CEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBFAFFD427DB814100897CEE /* Assets.xcassets */; };
 		BBFAFFD827DB814100897CEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBFAFFD627DB814100897CEE /* LaunchScreen.storyboard */; };
 		BBFAFFE327DB814100897CEE /* GithubReposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAFFE227DB814100897CEE /* GithubReposTests.swift */; };
@@ -47,12 +61,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB6D588C27DC5AC400C96487 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		BB6D589027DC5CB100C96487 /* TabBarPageCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPageCase.swift; sourceTree = "<group>"; };
+		BB6D589227DC5E9B00C96487 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BB6D589B27DC74B900C96487 /* GithubTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubTarget.swift; sourceTree = "<group>"; };
+		BB6D589D27DC754F00C96487 /* GithubTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubTabBarViewController.swift; sourceTree = "<group>"; };
+		BB6D589F27DC77BE00C96487 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		BB6D58A527DC796D00C96487 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		BB6D58A727DC7B4C00C96487 /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Black.otf"; path = "../../../../font/NotoSansKR-Black.otf"; sourceTree = "<group>"; };
+		BB6D58A827DC7B4C00C96487 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Regular.otf"; path = "../../../../font/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
+		BB6D58A927DC7B4C00C96487 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Medium.otf"; path = "../../../../font/NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
+		BB6D58AA27DC7B4C00C96487 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Light.otf"; path = "../../../../font/NotoSansKR-Light.otf"; sourceTree = "<group>"; };
+		BB6D58AB27DC7B4C00C96487 /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Thin.otf"; path = "../../../../font/NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
+		BB6D58AC27DC7B4C00C96487 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Bold.otf"; path = "../../../../font/NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
+		BB6D58B427DC7E2C00C96487 /* UIColor+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ex.swift"; sourceTree = "<group>"; };
+		BB6D58B627DC7E3700C96487 /* UIFont+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ex.swift"; sourceTree = "<group>"; };
 		BBFA000127DB872700897CEE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		BBFAFFC827DB813F00897CEE /* GithubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBFAFFCB27DB813F00897CEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBFAFFCD27DB813F00897CEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BBFAFFCF27DB813F00897CEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BBFAFFCF27DB813F00897CEE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BBFAFFD427DB814100897CEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBFAFFD727DB814100897CEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBFAFFD927DB814100897CEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,14 +99,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB6D589827DC6EC100C96487 /* RxRelay in Frameworks */,
 				BB6D588927DC596200C96487 /* Toast in Frameworks */,
-				BBFA002027DBA9D800897CEE /* RxTest in Frameworks */,
-				BBFA001C27DBA9D800897CEE /* RxRelay in Frameworks */,
-				BBFA001A27DBA9D800897CEE /* RxCocoa in Frameworks */,
 				BBFA002327DBABCB00897CEE /* SnapKit in Frameworks */,
-				BBFA001E27DBA9D800897CEE /* RxSwift in Frameworks */,
+				BB6D589627DC6EC100C96487 /* RxCocoa in Frameworks */,
 				BBFA002627DBABE400897CEE /* Moya in Frameworks */,
 				BBFA001727DBA99600897CEE /* RxDataSources in Frameworks */,
+				BB6D589A27DC6EC100C96487 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +126,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB6D588A27DC5A1E00C96487 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				BB6D589D27DC754F00C96487 /* GithubTabBarViewController.swift */,
+				BB6D588B27DC5A3300C96487 /* Coordinator */,
+				BBFA001327DB91A400897CEE /* Search */,
+				BBFA001427DB91E500897CEE /* Profile */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		BB6D588B27DC5A3300C96487 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BB6D588C27DC5AC400C96487 /* TabBarCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		BB6D588E27DC5C8F00C96487 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BB6D588F27DC5CA000C96487 /* Case */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BB6D588F27DC5CA000C96487 /* Case */ = {
+			isa = PBXGroup;
+			children = (
+				BB6D589027DC5CB100C96487 /* TabBarPageCase.swift */,
+			);
+			path = Case;
+			sourceTree = "<group>";
+		};
+		BB6D58A127DC786200C96487 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BBFAFFCF27DB813F00897CEE /* SearchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB6D58A227DC786A00C96487 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BB6D58A327DC786F00C96487 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB6D589227DC5E9B00C96487 /* ProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB6D58A427DC787300C96487 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BB6D58B327DC7E1000C96487 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BB6D58B427DC7E2C00C96487 /* UIColor+Ex.swift */,
+				BB6D58B627DC7E3700C96487 /* UIFont+Ex.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		BBFA000527DB874A00897CEE /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +231,12 @@
 		BBFA000827DB87A200897CEE /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				BB6D58A727DC7B4C00C96487 /* NotoSansKR-Black.otf */,
+				BB6D58AC27DC7B4C00C96487 /* NotoSansKR-Bold.otf */,
+				BB6D58AA27DC7B4C00C96487 /* NotoSansKR-Light.otf */,
+				BB6D58A927DC7B4C00C96487 /* NotoSansKR-Medium.otf */,
+				BB6D58A827DC7B4C00C96487 /* NotoSansKR-Regular.otf */,
+				BB6D58AB27DC7B4C00C96487 /* NotoSansKR-Thin.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -162,6 +270,7 @@
 		BBFA000C27DB8A0100897CEE /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BB6D589B27DC74B900C96487 /* GithubTarget.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -213,7 +322,8 @@
 		BBFA001327DB91A400897CEE /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				BBFAFFCF27DB813F00897CEE /* ViewController.swift */,
+				BB6D58A227DC786A00C96487 /* ViewModel */,
+				BB6D58A127DC786200C96487 /* View */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -221,6 +331,8 @@
 		BBFA001427DB91E500897CEE /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				BB6D58A427DC787300C96487 /* ViewModel */,
+				BB6D58A327DC786F00C96487 /* View */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -249,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				BBFAFFFB27DB86D200897CEE /* Application */,
+				BB6D588E27DC5C8F00C96487 /* Utils */,
 				BBFAFFFE27DB870700897CEE /* Presentation */,
 				BBFA000A27DB89E600897CEE /* Domain */,
 				BBFA000927DB89DE00897CEE /* Data */,
@@ -282,6 +395,8 @@
 				BBFAFFCB27DB813F00897CEE /* AppDelegate.swift */,
 				BBFAFFCD27DB813F00897CEE /* SceneDelegate.swift */,
 				BBFAFFFC27DB86E700897CEE /* AppAppearance.swift */,
+				BB6D589F27DC77BE00C96487 /* AppColor.swift */,
+				BB6D58A527DC796D00C96487 /* AppFont.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -290,8 +405,8 @@
 			isa = PBXGroup;
 			children = (
 				BBFA000527DB874A00897CEE /* Coordinator */,
-				BBFA001427DB91E500897CEE /* Profile */,
-				BBFA001327DB91A400897CEE /* Search */,
+				BB6D588A27DC5A1E00C96487 /* TabBar */,
+				BB6D58B327DC7E1000C96487 /* Extension */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -314,13 +429,12 @@
 			name = GithubRepos;
 			packageProductDependencies = (
 				BBFA001627DBA99600897CEE /* RxDataSources */,
-				BBFA001927DBA9D800897CEE /* RxCocoa */,
-				BBFA001B27DBA9D800897CEE /* RxRelay */,
-				BBFA001D27DBA9D800897CEE /* RxSwift */,
-				BBFA001F27DBA9D800897CEE /* RxTest */,
 				BBFA002227DBABCB00897CEE /* SnapKit */,
 				BBFA002527DBABE400897CEE /* Moya */,
 				BB6D588827DC596200C96487 /* Toast */,
+				BB6D589527DC6EC100C96487 /* RxCocoa */,
+				BB6D589727DC6EC100C96487 /* RxRelay */,
+				BB6D589927DC6EC100C96487 /* RxSwift */,
 			);
 			productName = GithubRepos;
 			productReference = BBFAFFC827DB813F00897CEE /* GithubRepos.app */;
@@ -396,10 +510,10 @@
 			mainGroup = BBFAFFBF27DB813F00897CEE;
 			packageReferences = (
 				BBFA001527DBA99600897CEE /* XCRemoteSwiftPackageReference "RxDataSources" */,
-				BBFA001827DBA9D800897CEE /* XCRemoteSwiftPackageReference "RxSwift" */,
 				BBFA002127DBABCB00897CEE /* XCRemoteSwiftPackageReference "SnapKit" */,
 				BBFA002427DBABE300897CEE /* XCRemoteSwiftPackageReference "Moya" */,
 				BB6D588727DC596200C96487 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				BB6D589427DC6EC100C96487 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = BBFAFFC927DB813F00897CEE /* Products */;
 			projectDirPath = "";
@@ -417,7 +531,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB6D58B027DC7B4C00C96487 /* NotoSansKR-Light.otf in Resources */,
+				BB6D58B127DC7B4C00C96487 /* NotoSansKR-Thin.otf in Resources */,
+				BB6D58B227DC7B4C00C96487 /* NotoSansKR-Bold.otf in Resources */,
+				BB6D58AD27DC7B4C00C96487 /* NotoSansKR-Black.otf in Resources */,
 				BBFAFFD827DB814100897CEE /* LaunchScreen.storyboard in Resources */,
+				BB6D58AF27DC7B4C00C96487 /* NotoSansKR-Medium.otf in Resources */,
+				BB6D58AE27DC7B4C00C96487 /* NotoSansKR-Regular.otf in Resources */,
 				BBFAFFD527DB814100897CEE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,11 +564,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBFA000227DB872700897CEE /* AppCoordinator.swift in Sources */,
-				BBFAFFD027DB813F00897CEE /* ViewController.swift in Sources */,
+				BBFAFFD027DB813F00897CEE /* SearchViewController.swift in Sources */,
+				BB6D58A627DC796D00C96487 /* AppFont.swift in Sources */,
+				BB6D589327DC5E9B00C96487 /* ProfileViewController.swift in Sources */,
+				BB6D589C27DC74B900C96487 /* GithubTarget.swift in Sources */,
+				BB6D588D27DC5AC400C96487 /* TabBarCoordinator.swift in Sources */,
+				BB6D58A027DC77BE00C96487 /* AppColor.swift in Sources */,
+				BB6D58B727DC7E3700C96487 /* UIFont+Ex.swift in Sources */,
 				BBFA000427DB873E00897CEE /* CoordinatorDelegate.swift in Sources */,
 				BBFAFFCC27DB813F00897CEE /* AppDelegate.swift in Sources */,
+				BB6D589127DC5CB100C96487 /* TabBarPageCase.swift in Sources */,
 				BBFA000027DB871B00897CEE /* Coordinator.swift in Sources */,
 				BBFAFFCE27DB813F00897CEE /* SceneDelegate.swift in Sources */,
+				BB6D58B527DC7E2C00C96487 /* UIColor+Ex.swift in Sources */,
+				BB6D589E27DC754F00C96487 /* GithubTabBarViewController.swift in Sources */,
 				BBFAFFFD27DB86E700897CEE /* AppAppearance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,7 +677,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -603,7 +732,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -621,6 +750,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UJW8376355;
+				ENABLE_TESTING_SEARCH_PATHS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GithubRepos/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -628,6 +758,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -649,6 +780,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UJW8376355;
+				ENABLE_TESTING_SEARCH_PATHS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GithubRepos/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -656,6 +788,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -795,17 +928,17 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		BBFA001527DBA99600897CEE /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+		BB6D589427DC6EC100C96487 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
 				branch = main;
 				kind = branch;
 			};
 		};
-		BBFA001827DBA9D800897CEE /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		BBFA001527DBA99600897CEE /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -835,30 +968,25 @@
 			package = BB6D588727DC596200C96487 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
 		};
+		BB6D589527DC6EC100C96487 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB6D589427DC6EC100C96487 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		BB6D589727DC6EC100C96487 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB6D589427DC6EC100C96487 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		BB6D589927DC6EC100C96487 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB6D589427DC6EC100C96487 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
 		BBFA001627DBA99600897CEE /* RxDataSources */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BBFA001527DBA99600897CEE /* XCRemoteSwiftPackageReference "RxDataSources" */;
 			productName = RxDataSources;
-		};
-		BBFA001927DBA9D800897CEE /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BBFA001827DBA9D800897CEE /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		BBFA001B27DBA9D800897CEE /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BBFA001827DBA9D800897CEE /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		BBFA001D27DBA9D800897CEE /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BBFA001827DBA9D800897CEE /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		BBFA001F27DBA9D800897CEE /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BBFA001827DBA9D800897CEE /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
 		};
 		BBFA002227DBABCB00897CEE /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
