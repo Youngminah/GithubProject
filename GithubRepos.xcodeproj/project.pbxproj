@@ -26,6 +26,9 @@
 		BB6D58B227DC7B4C00C96487 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D58AC27DC7B4C00C96487 /* NotoSansKR-Bold.otf */; };
 		BB6D58B527DC7E2C00C96487 /* UIColor+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58B427DC7E2C00C96487 /* UIColor+Ex.swift */; };
 		BB6D58B727DC7E3700C96487 /* UIFont+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58B627DC7E3700C96487 /* UIFont+Ex.swift */; };
+		BB6D58B927DCC57700C96487 /* GithubTarget+StubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58B827DCC57700C96487 /* GithubTarget+StubData.swift */; };
+		BB6D58BB27DCC59E00C96487 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58BA27DCC59E00C96487 /* APIConstant.swift */; };
+		BB6D58BD27DCC5B700C96487 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58BC27DCC5B700C96487 /* APIEnvironment.swift */; };
 		BBFA000027DB871B00897CEE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAFFFF27DB871B00897CEE /* Coordinator.swift */; };
 		BBFA000227DB872700897CEE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000127DB872700897CEE /* AppCoordinator.swift */; };
 		BBFA000427DB873E00897CEE /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */; };
@@ -76,6 +79,9 @@
 		BB6D58AC27DC7B4C00C96487 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Bold.otf"; path = "../../../../font/NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		BB6D58B427DC7E2C00C96487 /* UIColor+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ex.swift"; sourceTree = "<group>"; };
 		BB6D58B627DC7E3700C96487 /* UIFont+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ex.swift"; sourceTree = "<group>"; };
+		BB6D58B827DCC57700C96487 /* GithubTarget+StubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GithubTarget+StubData.swift"; sourceTree = "<group>"; };
+		BB6D58BA27DCC59E00C96487 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
+		BB6D58BC27DCC5B700C96487 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
 		BBFA000127DB872700897CEE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		BBFAFFC827DB813F00897CEE /* GithubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,6 +269,7 @@
 		BBFA000B27DB89FA00897CEE /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				BB6D58B827DCC57700C96487 /* GithubTarget+StubData.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -271,6 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				BB6D589B27DC74B900C96487 /* GithubTarget.swift */,
+				BB6D58BA27DCC59E00C96487 /* APIConstant.swift */,
+				BB6D58BC27DCC5B700C96487 /* APIEnvironment.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -565,7 +574,9 @@
 			files = (
 				BBFA000227DB872700897CEE /* AppCoordinator.swift in Sources */,
 				BBFAFFD027DB813F00897CEE /* SearchViewController.swift in Sources */,
+				BB6D58BB27DCC59E00C96487 /* APIConstant.swift in Sources */,
 				BB6D58A627DC796D00C96487 /* AppFont.swift in Sources */,
+				BB6D58BD27DCC5B700C96487 /* APIEnvironment.swift in Sources */,
 				BB6D589327DC5E9B00C96487 /* ProfileViewController.swift in Sources */,
 				BB6D589C27DC74B900C96487 /* GithubTarget.swift in Sources */,
 				BB6D588D27DC5AC400C96487 /* TabBarCoordinator.swift in Sources */,
@@ -579,6 +590,7 @@
 				BB6D58B527DC7E2C00C96487 /* UIColor+Ex.swift in Sources */,
 				BB6D589E27DC754F00C96487 /* GithubTabBarViewController.swift in Sources */,
 				BBFAFFFD27DB86E700897CEE /* AppAppearance.swift in Sources */,
+				BB6D58B927DCC57700C96487 /* GithubTarget+StubData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
