@@ -17,7 +17,7 @@ struct RepoItem {
     let id: Int
     let fullName: String
     let description: String?
-    let topics: [String]?
+    let topics: [String]
     let star: Int
     let fork: Int
     let language: String?
