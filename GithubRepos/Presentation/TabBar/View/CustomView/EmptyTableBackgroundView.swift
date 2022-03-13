@@ -9,8 +9,8 @@ import UIKit
 
 final class EmptyTableBackgroundView: UIView {
 
-    let emptyImageView = UIImageView(image: UIImage(systemName: "magnifyingglass"))
-    let titleLabel = DefaultLabel(font: .headerMediumBold, textColor: .gray500)
+    private let emptyImageView = UIImageView(image: UIImage(systemName: "magnifyingglass"))
+    private let titleLabel = DefaultLabel(font: .headerMediumBold, textColor: .gray500)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
