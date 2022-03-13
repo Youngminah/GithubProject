@@ -9,6 +9,9 @@ import Foundation
 
 enum AppColor: String {
 
+    case blue100
+    case blue400
+
     case coral400
     case coral500
 

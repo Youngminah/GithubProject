@@ -9,6 +9,12 @@ import UIKit.UIColor
 
 extension UIColor {
 
+    static var blue100: UIColor {
+        return UIColor(named: AppColor.blue100.rawValue)!
+    }
+    static var blue400: UIColor {
+        return UIColor(named: AppColor.blue400.rawValue)!
+    }
     static var coral400: UIColor {
         return UIColor(named: AppColor.coral400.rawValue)!
     }
