@@ -33,7 +33,7 @@ extension GithubTarget: TargetType {
     var path: String {
         switch self {
         case .search:
-            return "/search"
+            return "/search/repositories"
         case .userRepos(let owners, _):
             return "/users/\(owners)/repos"
         case .user(let owners):
@@ -87,7 +87,8 @@ extension GithubTarget: TargetType {
             ]
         case .star,
              .unstar:
-            let token = UserDefaults.standard.string(forKey: "token")!
+            //let token = UserDefaults.standard.string(forKey: "token")!
+            let token = "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"
             return [
                 "Accept": "application/vnd.github.v3+json",
                 "Authorization": "Bearer \(token)"
