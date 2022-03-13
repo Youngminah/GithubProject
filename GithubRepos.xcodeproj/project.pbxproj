@@ -49,6 +49,16 @@
 		BB6D58E727DCFC6900C96487 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58E627DCFC6900C96487 /* BaseViewController.swift */; };
 		BB6D58E927DCFC7400C96487 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58E827DCFC7400C96487 /* BaseTableViewCell.swift */; };
 		BB6D58EB27DCFC8100C96487 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58EA27DCFC8100C96487 /* BaseCollectionViewCell.swift */; };
+		BB6D58EE27DD001600C96487 /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58ED27DD001600C96487 /* UIViewController+Ex.swift */; };
+		BB6D58F127DD028100C96487 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58F027DD028100C96487 /* RepositoryCell.swift */; };
+		BB6D58F327DD030500C96487 /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58F227DD030500C96487 /* TopicCell.swift */; };
+		BB6D58F527DD06D600C96487 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58F427DD06D600C96487 /* PaddingLabel.swift */; };
+		BB6D58F727DD099A00C96487 /* DefaultLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58F627DD099A00C96487 /* DefaultLabel.swift */; };
+		BB6D58F927DD0F9E00C96487 /* DynamicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58F827DD0F9E00C96487 /* DynamicCollectionView.swift */; };
+		BB6D58FB27DD0FFA00C96487 /* CollectionViewLeftAlignFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58FA27DD0FFA00C96487 /* CollectionViewLeftAlignFlowLayout.swift */; };
+		BB6D58FD27DDEA8000C96487 /* Int+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58FC27DDEA8000C96487 /* Int+Ex.swift */; };
+		BB6D58FF27DDF57900C96487 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58FE27DDF57900C96487 /* CircleView.swift */; };
+		BB6D590127DDF6E900C96487 /* LanguageCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D590027DDF6E900C96487 /* LanguageCase.swift */; };
 		BBFA000027DB871B00897CEE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAFFFF27DB871B00897CEE /* Coordinator.swift */; };
 		BBFA000227DB872700897CEE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000127DB872700897CEE /* AppCoordinator.swift */; };
 		BBFA000427DB873E00897CEE /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */; };
@@ -122,6 +132,16 @@
 		BB6D58E627DCFC6900C96487 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BB6D58E827DCFC7400C96487 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		BB6D58EA27DCFC8100C96487 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB6D58ED27DD001600C96487 /* UIViewController+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ex.swift"; sourceTree = "<group>"; };
+		BB6D58F027DD028100C96487 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		BB6D58F227DD030500C96487 /* TopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
+		BB6D58F427DD06D600C96487 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		BB6D58F627DD099A00C96487 /* DefaultLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLabel.swift; sourceTree = "<group>"; };
+		BB6D58F827DD0F9E00C96487 /* DynamicCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCollectionView.swift; sourceTree = "<group>"; };
+		BB6D58FA27DD0FFA00C96487 /* CollectionViewLeftAlignFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLeftAlignFlowLayout.swift; sourceTree = "<group>"; };
+		BB6D58FC27DDEA8000C96487 /* Int+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ex.swift"; sourceTree = "<group>"; };
+		BB6D58FE27DDF57900C96487 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		BB6D590027DDF6E900C96487 /* LanguageCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCase.swift; sourceTree = "<group>"; };
 		BBFA000127DB872700897CEE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		BBFAFFC827DB813F00897CEE /* GithubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				BB6D589027DC5CB100C96487 /* TabBarPageCase.swift */,
+				BB6D590027DDF6E900C96487 /* LanguageCase.swift */,
 			);
 			path = Case;
 			sourceTree = "<group>";
@@ -220,8 +241,10 @@
 		BB6D58B327DC7E1000C96487 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				BB6D58EC27DCFFFD00C96487 /* RxExtension */,
 				BB6D58B427DC7E2C00C96487 /* UIColor+Ex.swift */,
 				BB6D58B627DC7E3700C96487 /* UIFont+Ex.swift */,
+				BB6D58FC27DDEA8000C96487 /* Int+Ex.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -248,6 +271,7 @@
 		BB6D58DC27DCFA3200C96487 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BB6D58EF27DD01E300C96487 /* Cell */,
 				BB6D58E427DCFC2500C96487 /* CustomView */,
 				BB6D589D27DC754F00C96487 /* GithubTabBarViewController.swift */,
 				BBFAFFCF27DB813F00897CEE /* SearchViewController.swift */,
@@ -268,6 +292,11 @@
 			isa = PBXGroup;
 			children = (
 				BB6D58E527DCFC3400C96487 /* BaseView */,
+				BB6D58F427DD06D600C96487 /* PaddingLabel.swift */,
+				BB6D58F627DD099A00C96487 /* DefaultLabel.swift */,
+				BB6D58F827DD0F9E00C96487 /* DynamicCollectionView.swift */,
+				BB6D58FA27DD0FFA00C96487 /* CollectionViewLeftAlignFlowLayout.swift */,
+				BB6D58FE27DDF57900C96487 /* CircleView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -280,6 +309,23 @@
 				BB6D58EA27DCFC8100C96487 /* BaseCollectionViewCell.swift */,
 			);
 			path = BaseView;
+			sourceTree = "<group>";
+		};
+		BB6D58EC27DCFFFD00C96487 /* RxExtension */ = {
+			isa = PBXGroup;
+			children = (
+				BB6D58ED27DD001600C96487 /* UIViewController+Ex.swift */,
+			);
+			path = RxExtension;
+			sourceTree = "<group>";
+		};
+		BB6D58EF27DD01E300C96487 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BB6D58F027DD028100C96487 /* RepositoryCell.swift */,
+				BB6D58F227DD030500C96487 /* TopicCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		BBFA000527DB874A00897CEE /* Coordinator */ = {
@@ -641,6 +687,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6D58C127DCD34C00C96487 /* GithubRepositoryType.swift in Sources */,
+				BB6D58EE27DD001600C96487 /* UIViewController+Ex.swift in Sources */,
 				BBFA000227DB872700897CEE /* AppCoordinator.swift in Sources */,
 				BBFAFFD027DB813F00897CEE /* SearchViewController.swift in Sources */,
 				BB6D58BB27DCC59E00C96487 /* APIConstant.swift in Sources */,
@@ -649,7 +696,9 @@
 				BB6D58BD27DCC5B700C96487 /* APIEnvironment.swift in Sources */,
 				BB6D58CB27DCD72000C96487 /* UserReposResponseDTO.swift in Sources */,
 				BB6D58CD27DCD73E00C96487 /* UserInfoResponseDTO.swift in Sources */,
+				BB6D58F527DD06D600C96487 /* PaddingLabel.swift in Sources */,
 				BB6D58D327DCDEE500C96487 /* Repos.swift in Sources */,
+				BB6D58FF27DDF57900C96487 /* CircleView.swift in Sources */,
 				BB6D589327DC5E9B00C96487 /* ProfileViewController.swift in Sources */,
 				BB6D58EB27DCFC8100C96487 /* BaseCollectionViewCell.swift in Sources */,
 				BB6D58E727DCFC6900C96487 /* BaseViewController.swift in Sources */,
@@ -658,7 +707,9 @@
 				BB6D58E127DCFA8800C96487 /* ViewModelType.swift in Sources */,
 				BB6D588D27DC5AC400C96487 /* TabBarCoordinator.swift in Sources */,
 				BB6D58D727DCEBA300C96487 /* ProfileUseCase.swift in Sources */,
+				BB6D58F327DD030500C96487 /* TopicCell.swift in Sources */,
 				BB6D58D127DCDEDC00C96487 /* UserInfo.swift in Sources */,
+				BB6D58FD27DDEA8000C96487 /* Int+Ex.swift in Sources */,
 				BB6D58A027DC77BE00C96487 /* AppColor.swift in Sources */,
 				BB6D58B727DC7E3700C96487 /* UIFont+Ex.swift in Sources */,
 				BB6D58DB27DCFA1800C96487 /* ProfileViewModel.swift in Sources */,
@@ -666,12 +717,17 @@
 				BB6D58E927DCFC7400C96487 /* BaseTableViewCell.swift in Sources */,
 				BB6D58CF27DCDE0800C96487 /* ReposQuery.swift in Sources */,
 				BBFA000427DB873E00897CEE /* CoordinatorDelegate.swift in Sources */,
+				BB6D58FB27DD0FFA00C96487 /* CollectionViewLeftAlignFlowLayout.swift in Sources */,
+				BB6D590127DDF6E900C96487 /* LanguageCase.swift in Sources */,
 				BBFAFFCC27DB813F00897CEE /* AppDelegate.swift in Sources */,
 				BB6D58BF27DCD30600C96487 /* GithubRepository.swift in Sources */,
+				BB6D58F127DD028100C96487 /* RepositoryCell.swift in Sources */,
 				BB6D58DE27DCFA6500C96487 /* AuthViewModel.swift in Sources */,
 				BB6D589127DC5CB100C96487 /* TabBarPageCase.swift in Sources */,
+				BB6D58F727DD099A00C96487 /* DefaultLabel.swift in Sources */,
 				BB6D58C527DCD66700C96487 /* ReposRequestDTO.swift in Sources */,
 				BBFA000027DB871B00897CEE /* Coordinator.swift in Sources */,
+				BB6D58F927DD0F9E00C96487 /* DynamicCollectionView.swift in Sources */,
 				BBFAFFCE27DB813F00897CEE /* SceneDelegate.swift in Sources */,
 				BB6D58B527DC7E2C00C96487 /* UIColor+Ex.swift in Sources */,
 				BB6D58E327DCFB3100C96487 /* AuthUseCase.swift in Sources */,
