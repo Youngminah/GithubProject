@@ -9,8 +9,8 @@ import UIKit.UITableView
 
 extension UITableView {
 
-    func setNoDataPlaceholder(title: String) {
-        self.backgroundView = EmptyTableBackgroundView(
+    func setEmptyBackgroundView(title: String) {
+        self.backgroundView = EmptyBackgroundView(
             frame: CGRect(x: 0,
                           y: 0,
                           width: self.bounds.width,
@@ -20,9 +20,35 @@ extension UITableView {
         self.separatorStyle = .none
     }
 
-    func removeNoDataPlaceholder() {
+    func setLoadingBackgroundView() {
+        self.backgroundView = LoadingBackgroundView(
+            frame: CGRect(x: 0,
+                          y: 0,
+                          width: self.bounds.width,
+                          height: self.bounds.height)
+        )
+        self.isScrollEnabled = false
+        self.separatorStyle = .none
+    }
+
+    func removeBackgroundView() {
          self.isScrollEnabled = true
          self.backgroundView = nil
          self.separatorStyle = .singleLine
      }
+
+    func createSpinnerFooter() {
+        let footerView = UIView(
+            frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: 100)
+        )
+        let spinner = UIActivityIndicatorView()
+        spinner.center = footerView.center
+        footerView.addSubview(spinner)
+        spinner.startAnimating()
+        self.tableFooterView = footerView
+    }
+
+    func removeSpinnerFooter() {
+        self.tableFooterView = nil
+    }
 }
