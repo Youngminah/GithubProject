@@ -14,7 +14,7 @@ final class RepositoryCell: BaseTableViewCell {
 
     static let identifier = "RepositoryCell"
 
-    lazy var collectionView: DynamicCollectionView = {
+    private lazy var collectionView: DynamicCollectionView = {
         let layout = CollectionViewLeftAlignFlowLayout()
         let collectionView = DynamicCollectionView(frame: .zero, collectionViewLayout: layout)
         return collectionView
@@ -82,18 +82,18 @@ final class RepositoryCell: BaseTableViewCell {
             make.width.height.equalTo(40)
         }
         repoImageView.snp.makeConstraints { make in
-            make.top.left.equalToSuperview().offset(16)
-            make.width.height.equalTo(30)
+            make.top.left.equalToSuperview().offset(20)
+            make.width.height.equalTo(25)
         }
         nameLabel.snp.makeConstraints { make in
-            make.centerY.equalTo(repoImageView)
+            make.top.equalToSuperview().offset(16)
             make.left.equalTo(repoImageView.snp.right).offset(10)
             make.right.equalTo(starButton.snp.left).offset(-16)
         }
         descriptionLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(16)
             make.right.equalToSuperview().offset(-16)
-            make.top.equalTo(repoImageView.snp.bottom).offset(16)
+            make.top.equalTo(nameLabel.snp.bottom).offset(16)
         }
         starImageView.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(16)
@@ -130,14 +130,16 @@ final class RepositoryCell: BaseTableViewCell {
 
     override func setConfiguration() {
         super.setConfiguration()
+        nameLabel.textAlignment = .natural
+        descriptionLabel.textAlignment = .natural
         starButton.setImage(UIImage(systemName: "star"), for: .normal)
         starButton.setImage(UIImage(systemName: "star.fill"), for: .selected)
         starButton.imageView?.tintColor = .systemYellow
-        repoImageView.tintColor = .gray500
+        repoImageView.tintColor = .orange
         starImageView.tintColor = .gray500
+        languageLabel.lineBreakMode = .byCharWrapping
         collectionView.register(TopicCell.self, forCellWithReuseIdentifier: TopicCell.identifier)
         collectionView.isScrollEnabled = false
-        //collectionView.backgroundColor = .yellow200
     }
 
     func configure(item: RepoItem) {
