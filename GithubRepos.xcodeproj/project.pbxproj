@@ -60,8 +60,12 @@
 		BB6D58FF27DDF57900C96487 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58FE27DDF57900C96487 /* CircleView.swift */; };
 		BB6D590127DDF6E900C96487 /* LanguageCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D590027DDF6E900C96487 /* LanguageCase.swift */; };
 		BB6D590327DDFEE000C96487 /* UITableView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D590227DDFEE000C96487 /* UITableView+Ex.swift */; };
-		BB6D590627DDFF0D00C96487 /* EmptyTableBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D590527DDFF0D00C96487 /* EmptyTableBackgroundView.swift */; };
+		BB6D590627DDFF0D00C96487 /* EmptyBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D590527DDFF0D00C96487 /* EmptyBackgroundView.swift */; };
 		BB6D590827DDFF9A00C96487 /* UITableView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D590727DDFF9A00C96487 /* UITableView+Rx.swift */; };
+		BB6D590A27DE148B00C96487 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D590927DE148B00C96487 /* SearchBar.swift */; };
+		BB6D590C27DE14D100C96487 /* SearchBar+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D590B27DE14D100C96487 /* SearchBar+Rx.swift */; };
+		BB6D590E27DE1DC600C96487 /* LoadingBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D590D27DE1DC600C96487 /* LoadingBackgroundView.swift */; };
+		BB6D591027DE513E00C96487 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D590F27DE513E00C96487 /* ProfileHeaderView.swift */; };
 		BBFA000027DB871B00897CEE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAFFFF27DB871B00897CEE /* Coordinator.swift */; };
 		BBFA000227DB872700897CEE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000127DB872700897CEE /* AppCoordinator.swift */; };
 		BBFA000427DB873E00897CEE /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */; };
@@ -146,8 +150,12 @@
 		BB6D58FE27DDF57900C96487 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		BB6D590027DDF6E900C96487 /* LanguageCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCase.swift; sourceTree = "<group>"; };
 		BB6D590227DDFEE000C96487 /* UITableView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ex.swift"; sourceTree = "<group>"; };
-		BB6D590527DDFF0D00C96487 /* EmptyTableBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableBackgroundView.swift; sourceTree = "<group>"; };
+		BB6D590527DDFF0D00C96487 /* EmptyBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyBackgroundView.swift; sourceTree = "<group>"; };
 		BB6D590727DDFF9A00C96487 /* UITableView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Rx.swift"; sourceTree = "<group>"; };
+		BB6D590927DE148B00C96487 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		BB6D590B27DE14D100C96487 /* SearchBar+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchBar+Rx.swift"; sourceTree = "<group>"; };
+		BB6D590D27DE1DC600C96487 /* LoadingBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingBackgroundView.swift; sourceTree = "<group>"; };
+		BB6D590F27DE513E00C96487 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		BBFA000127DB872700897CEE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		BBFAFFC827DB813F00897CEE /* GithubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -304,7 +312,10 @@
 				BB6D58F827DD0F9E00C96487 /* DynamicCollectionView.swift */,
 				BB6D58FA27DD0FFA00C96487 /* CollectionViewLeftAlignFlowLayout.swift */,
 				BB6D58FE27DDF57900C96487 /* CircleView.swift */,
-				BB6D590527DDFF0D00C96487 /* EmptyTableBackgroundView.swift */,
+				BB6D590527DDFF0D00C96487 /* EmptyBackgroundView.swift */,
+				BB6D590927DE148B00C96487 /* SearchBar.swift */,
+				BB6D590D27DE1DC600C96487 /* LoadingBackgroundView.swift */,
+				BB6D590F27DE513E00C96487 /* ProfileHeaderView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -324,6 +335,7 @@
 			children = (
 				BB6D58ED27DD001600C96487 /* UIViewController+Rx.swift */,
 				BB6D590727DDFF9A00C96487 /* UITableView+Rx.swift */,
+				BB6D590B27DE14D100C96487 /* SearchBar+Rx.swift */,
 			);
 			path = RxExtension;
 			sourceTree = "<group>";
@@ -710,6 +722,7 @@
 				BB6D58FF27DDF57900C96487 /* CircleView.swift in Sources */,
 				BB6D590827DDFF9A00C96487 /* UITableView+Rx.swift in Sources */,
 				BB6D589327DC5E9B00C96487 /* ProfileViewController.swift in Sources */,
+				BB6D590C27DE14D100C96487 /* SearchBar+Rx.swift in Sources */,
 				BB6D58EB27DCFC8100C96487 /* BaseCollectionViewCell.swift in Sources */,
 				BB6D58E727DCFC6900C96487 /* BaseViewController.swift in Sources */,
 				BB6D589C27DC74B900C96487 /* GithubTarget.swift in Sources */,
@@ -733,15 +746,18 @@
 				BB6D58BF27DCD30600C96487 /* GithubRepository.swift in Sources */,
 				BB6D58F127DD028100C96487 /* RepositoryCell.swift in Sources */,
 				BB6D58DE27DCFA6500C96487 /* AuthViewModel.swift in Sources */,
+				BB6D591027DE513E00C96487 /* ProfileHeaderView.swift in Sources */,
 				BB6D589127DC5CB100C96487 /* TabBarPageCase.swift in Sources */,
 				BB6D58F727DD099A00C96487 /* DefaultLabel.swift in Sources */,
+				BB6D590A27DE148B00C96487 /* SearchBar.swift in Sources */,
 				BB6D58C527DCD66700C96487 /* ReposRequestDTO.swift in Sources */,
 				BBFA000027DB871B00897CEE /* Coordinator.swift in Sources */,
 				BB6D58F927DD0F9E00C96487 /* DynamicCollectionView.swift in Sources */,
 				BB6D590327DDFEE000C96487 /* UITableView+Ex.swift in Sources */,
 				BBFAFFCE27DB813F00897CEE /* SceneDelegate.swift in Sources */,
-				BB6D590627DDFF0D00C96487 /* EmptyTableBackgroundView.swift in Sources */,
+				BB6D590627DDFF0D00C96487 /* EmptyBackgroundView.swift in Sources */,
 				BB6D58B527DC7E2C00C96487 /* UIColor+Ex.swift in Sources */,
+				BB6D590E27DE1DC600C96487 /* LoadingBackgroundView.swift in Sources */,
 				BB6D58E327DCFB3100C96487 /* AuthUseCase.swift in Sources */,
 				BB6D589E27DC754F00C96487 /* GithubTabBarViewController.swift in Sources */,
 				BBFAFFFD27DB86E700897CEE /* AppAppearance.swift in Sources */,
