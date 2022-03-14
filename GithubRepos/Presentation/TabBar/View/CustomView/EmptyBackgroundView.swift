@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class EmptyTableBackgroundView: UIView {
+final class EmptyBackgroundView: UIView {
 
     private let emptyImageView = UIImageView(image: UIImage(systemName: "magnifyingglass"))
     private let titleLabel = DefaultLabel(font: .headerMediumBold, textColor: .gray500)
