@@ -16,6 +16,7 @@ final class ProfileUseCase {
 
     let successReqeustUserInfo = PublishRelay<UserInfo>()
     let successReqeustUserRepos = PublishRelay<[RepoItem]>()
+    let successUnstarred = PublishRelay<Void>()
     let failGithubError = PublishRelay<GithubServerError>()
 
     init(
@@ -39,12 +40,26 @@ extension ProfileUseCase {
         }
     }
 
-    func requestUserRepos(owners: String, page: Int) {
-        self.githubRepository.requestUserRepos(owners: owners, page: page) { [weak self] response in
+    func requestUserStarredRepos(owners: String, page: Int) {
+        self.githubRepository.requestUserStarredRepos(owners: owners, page: page) { [weak self] response in
             guard let self = self else { return }
             switch response {
             case .success(let userRepos):
+                print("응답 받아온 값-->", userRepos[0].fullName)
                 self.successReqeustUserRepos.accept(userRepos)
+            case .failure(let error):
+                self.failGithubError.accept(error)
+            }
+        }
+    }
+
+    func requestUnstarredRepos(fullRepoName: String) {
+        print("좋아요 취소한 레포 -->", fullRepoName)
+        self.githubRepository.requestUnstar(repos: fullRepoName) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(_):
+                self.successUnstarred.accept(())
             case .failure(let error):
                 self.failGithubError.accept(error)
             }

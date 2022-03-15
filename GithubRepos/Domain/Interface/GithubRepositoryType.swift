@@ -18,7 +18,7 @@ protocol GithubRepositoryType: AnyObject {
         ) -> Void
     )
 
-    func requestUserRepos(            // 유저 레파지토리 조회 API
+    func requestUserStarredRepos(            // 유저 레파지토리 조회 API
         owners: String,
         page: Int,
         completion: @escaping (
@@ -36,7 +36,6 @@ protocol GithubRepositoryType: AnyObject {
     )
 
     func requestStar(                 // 레파지토리 좋아요 API
-        owners: String,
         repos: String,
         completion: @escaping (
             Result< Int,
@@ -45,7 +44,6 @@ protocol GithubRepositoryType: AnyObject {
     )
 
     func requestUnstar(               // 레파지토리 좋아요 취소 API
-        owners: String,
         repos: String,
         completion: @escaping (
             Result< Int,
