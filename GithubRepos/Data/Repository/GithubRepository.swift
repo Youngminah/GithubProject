@@ -11,7 +11,7 @@ import Moya
 enum GithubServerError: Int, Error {
 
     case duplicatedError = 201
-    case inValidURL = 404
+    case notFoundError = 404
     case unregisterUser = 406
     case internalServerError = 500
     case internalClientError = 501
@@ -25,7 +25,7 @@ extension GithubServerError {
     var errorDescription: String {
         switch self {
         case .duplicatedError: return "201:DUPLICATE_ERROR"
-        case .inValidURL: return "404:INVALID_URL_ERROR"
+        case .notFoundError: return "404:NOT_FOUND_ERROR"
         case .unregisterUser: return "406:UNREGISTER_USER_ERROR"
         case .internalServerError: return "500:INTERNAL_SERVER_ERROR"
         case .internalClientError: return "501:INTERNAL_CLIENT_ERROR"
@@ -78,6 +78,12 @@ extension GithubRepository {
             case .failure(let error):
                 completion(.failure(GithubServerError(rawValue: error.response?.statusCode ?? -1) ?? .unknown))
             }
+        }
+    }
+
+    func requestIsStar(repos: String, completion: @escaping (Result<Int, GithubServerError>) -> Void) {
+        provider.request(.isStar(repos: repos)) { result in
+            self.process(result: result, completion: completion)
         }
     }
 
