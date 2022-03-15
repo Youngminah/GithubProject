@@ -12,7 +12,7 @@ struct Repos {
     let items: [RepoItem]
 }
 
-struct RepoItem {
+struct RepoItem: Equatable {
 
     let id: Int
     let fullName: String
