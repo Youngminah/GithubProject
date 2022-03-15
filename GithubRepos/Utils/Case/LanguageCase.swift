@@ -30,7 +30,7 @@ enum LanguageCase: String, CaseIterable {
         case .python:
             return .purple
         case .empty:
-            return .systemBackground
+            return .secondarySystemGroupedBackground
         case .unknown:
             return .gray500
         }

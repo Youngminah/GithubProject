@@ -72,6 +72,7 @@
 		BB6D592127DFD35E00C96487 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D592027DFD35E00C96487 /* ImageCacheManager.swift */; };
 		BB6D592327DFD3C800C96487 /* UIImageView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D592227DFD3C800C96487 /* UIImageView+Ex.swift */; };
 		BB6D592527E0622800C96487 /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D592427E0622800C96487 /* StarButton.swift */; };
+		BB6D592727E0929C00C96487 /* StarUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D592627E0929C00C96487 /* StarUseCase.swift */; };
 		BBFA000027DB871B00897CEE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAFFFF27DB871B00897CEE /* Coordinator.swift */; };
 		BBFA000227DB872700897CEE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000127DB872700897CEE /* AppCoordinator.swift */; };
 		BBFA000427DB873E00897CEE /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */; };
@@ -167,6 +168,7 @@
 		BB6D592027DFD35E00C96487 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		BB6D592227DFD3C800C96487 /* UIImageView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ex.swift"; sourceTree = "<group>"; };
 		BB6D592427E0622800C96487 /* StarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButton.swift; sourceTree = "<group>"; };
+		BB6D592627E0929C00C96487 /* StarUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarUseCase.swift; sourceTree = "<group>"; };
 		BBFA000127DB872700897CEE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		BBFAFFC827DB813F00897CEE /* GithubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -531,6 +533,7 @@
 				BB6D58E227DCFB3100C96487 /* AuthUseCase.swift */,
 				BB6D58D427DCEB8100C96487 /* SearchUseCase.swift */,
 				BB6D58D627DCEBA300C96487 /* ProfileUseCase.swift */,
+				BB6D592627E0929C00C96487 /* StarUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -829,6 +832,7 @@
 				BB6D58FB27DD0FFA00C96487 /* CollectionViewLeftAlignFlowLayout.swift in Sources */,
 				BB6D592127DFD35E00C96487 /* ImageCacheManager.swift in Sources */,
 				BB6D590127DDF6E900C96487 /* LanguageCase.swift in Sources */,
+				BB6D592727E0929C00C96487 /* StarUseCase.swift in Sources */,
 				BBFAFFCC27DB813F00897CEE /* AppDelegate.swift in Sources */,
 				BB6D591B27DFC36500C96487 /* MoyaCacheablePlugin.swift in Sources */,
 				BB6D58BF27DCD30600C96487 /* GithubRepository.swift in Sources */,
