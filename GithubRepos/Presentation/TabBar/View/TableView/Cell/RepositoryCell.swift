@@ -45,7 +45,8 @@ final class RepositoryCell: BaseTableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        //disposeBag = DisposeBag()
+        disposeBag = DisposeBag()
+        bind()
     }
 
     private func bind() {
