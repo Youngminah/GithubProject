@@ -31,7 +31,7 @@ final class TopicCell: BaseCollectionViewCell {
         super.setConstraints()
         topicLabel.snp.makeConstraints { make in
             make.top.bottom.left.equalToSuperview()
-            make.right.equalToSuperview().priority(.medium)
+            make.right.equalToSuperview().priority(.low) // 셀프 사이징
         }
     }
 
