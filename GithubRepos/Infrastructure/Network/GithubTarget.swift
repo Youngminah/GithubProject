@@ -14,11 +14,11 @@ enum GithubTarget {
     // search
     case search(parameters: DictionaryType)
     // users
-    case userRepos(owners: String, parameters: DictionaryType)
+    case userStarredRepos(owners: String, parameters: DictionaryType)
     case user(owners: String)
     // star
-    case star(owners: String, repos: String)
-    case unstar(owners: String, repos: String)
+    case star(repos: String)
+    case unstar(repos: String)
 }
 
 extension GithubTarget: TargetType {
@@ -34,20 +34,20 @@ extension GithubTarget: TargetType {
         switch self {
         case .search:
             return "/search/repositories"
-        case .userRepos(let owners, _):
-            return "/users/\(owners)/repos"
+        case .userStarredRepos(let owners, _):
+            return "/users/\(owners)/starred"
         case .user(let owners):
             return "/users/\(owners)"
-        case .star(let owners, let repos),
-             .unstar(let owners, let repos):
-            return "/user/starred/\(owners)/\(repos)"
+        case .star(let repos),
+             .unstar(let repos):
+            return "/user/starred/\(repos)"
         }
     }
 
     var method: Moya.Method {
         switch self {
         case .search,
-             .userRepos,
+             .userStarredRepos,
              .user:
             return .get
         case .star:
@@ -64,7 +64,7 @@ extension GithubTarget: TargetType {
     var task: Task {
         switch self {
         case .search(let parameters),
-             .userRepos(_, let parameters):
+             .userStarredRepos(_, let parameters):
             return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
         case .user,
              .star,
@@ -80,10 +80,15 @@ extension GithubTarget: TargetType {
     var headers: [String: String]? {
         switch self {
         case .search,
-             .userRepos,
+             .userStarredRepos,
              .user:
+//            return [
+//                "Accept": "application/vnd.github.v3+json",
+//            ]
+            let token = "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"
             return [
                 "Accept": "application/vnd.github.v3+json",
+                "Authorization": "Bearer \(token)"
             ]
         case .star,
              .unstar:
@@ -93,6 +98,18 @@ extension GithubTarget: TargetType {
                 "Accept": "application/vnd.github.v3+json",
                 "Authorization": "Bearer \(token)"
             ]
+        }
+    }
+}
+
+extension GithubTarget: MoyaCacheable {
+
+    var cachePolicy: MoyaCacheablePolicy {
+        switch self {
+        case .userStarredRepos:
+            return .reloadIgnoringLocalAndRemoteCacheData
+        default:
+            return .useProtocolCachePolicy
         }
     }
 }

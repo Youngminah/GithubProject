@@ -37,7 +37,7 @@ extension GithubServerError {
 final class GithubRepository: GithubRepositoryType {
 
     let provider: MoyaProvider<GithubTarget>
-    init() { provider = MoyaProvider<GithubTarget>() }
+    init() { provider = MoyaProvider<GithubTarget>(plugins: [MoyaCacheablePlugin()]) }
 }
 
 extension GithubRepository {
@@ -50,14 +50,15 @@ extension GithubRepository {
                 let data = try? JSONDecoder().decode(ReposResponseDTO.self, from: response.data)
                 completion(.success(data!.toDomain()))
             case .failure(let error):
+                print(error)
                 completion(.failure(GithubServerError(rawValue: error.response?.statusCode ?? -1) ?? .unknown))
             }
         }
     }
 
-    func requestUserRepos(owners: String, page: Int, completion: @escaping (Result<[RepoItem], GithubServerError>) -> Void) {
+    func requestUserStarredRepos(owners: String, page: Int, completion: @escaping (Result<[RepoItem], GithubServerError>) -> Void) {
         let requestDTO = UserReposRequestDTO(page: page)
-        provider.request(.userRepos(owners: owners, parameters: requestDTO.toDictionary)) { result in
+        provider.request(.userStarredRepos(owners: owners, parameters: requestDTO.toDictionary)) { result in
             switch result {
             case .success(let response):
                 let data = try? JSONDecoder().decode([RepoItemDTO].self, from: response.data)
@@ -80,14 +81,14 @@ extension GithubRepository {
         }
     }
 
-    func requestStar(owners: String, repos: String, completion: @escaping (Result<Int, GithubServerError>) -> Void) {
-        provider.request(.star(owners: owners, repos: repos)) { result in
+    func requestStar(repos: String, completion: @escaping (Result<Int, GithubServerError>) -> Void) {
+        provider.request(.star(repos: repos)) { result in
             self.process(result: result, completion: completion)
         }
     }
 
-    func requestUnstar(owners: String, repos: String, completion: @escaping (Result<Int, GithubServerError>) -> Void) {
-        provider.request(.unstar(owners: owners, repos: repos)) { result in
+    func requestUnstar(repos: String, completion: @escaping (Result<Int, GithubServerError>) -> Void) {
+        provider.request(.unstar(repos: repos)) { result in
             self.process(result: result, completion: completion)
         }
     }
@@ -102,6 +103,7 @@ extension GithubRepository {
     ) {
         switch result {
         case .success(let response):
+            print(response)
             completion(.success(response.statusCode))
         case .failure(let error):
             print(error)
