@@ -17,6 +17,7 @@ enum GithubTarget {
     case userStarredRepos(owners: String, parameters: DictionaryType)
     case user(owners: String)
     // star
+    case isStar(repos: String)
     case star(repos: String)
     case unstar(repos: String)
 }
@@ -38,7 +39,8 @@ extension GithubTarget: TargetType {
             return "/users/\(owners)/starred"
         case .user(let owners):
             return "/users/\(owners)"
-        case .star(let repos),
+        case .isStar(let repos),
+             .star(let repos),
              .unstar(let repos):
             return "/user/starred/\(repos)"
         }
@@ -48,7 +50,8 @@ extension GithubTarget: TargetType {
         switch self {
         case .search,
              .userStarredRepos,
-             .user:
+             .user,
+             .isStar:
             return .get
         case .star:
             return .put
@@ -67,6 +70,7 @@ extension GithubTarget: TargetType {
              .userStarredRepos(_, let parameters):
             return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
         case .user,
+             .isStar,
              .star,
              .unstar:
             return .requestPlain
@@ -90,7 +94,8 @@ extension GithubTarget: TargetType {
                 "Accept": "application/vnd.github.v3+json",
                 "Authorization": "Bearer \(token)"
             ]
-        case .star,
+        case .isStar,
+             .star,
              .unstar:
             //let token = UserDefaults.standard.string(forKey: "token")!
             let token = "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"
@@ -106,7 +111,7 @@ extension GithubTarget: MoyaCacheable {
 
     var cachePolicy: MoyaCacheablePolicy {
         switch self {
-        case .userStarredRepos:
+        case .userStarredRepos, .isStar, .star, .unstar:
             return .reloadIgnoringLocalAndRemoteCacheData
         default:
             return .useProtocolCachePolicy
