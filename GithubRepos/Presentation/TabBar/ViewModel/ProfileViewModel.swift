@@ -19,7 +19,6 @@ final class ProfileViewModel: ViewModelType {
         let viewDidLoad: Observable<Void>
         let pullRefresh: Signal<Void>
         let didScrollToBottom: Signal<Void>
-        let unstarButtonTap: Signal<RepoItem>
     }
     struct Output {
         let userInfo: Signal<UserInfo>
@@ -85,15 +84,6 @@ final class ProfileViewModel: ViewModelType {
             })
             .disposed(by: disposeBag)
 
-        input.unstarButtonTap
-            .throttle(.milliseconds(500))
-            .emit(onNext: { [weak self] item in
-                guard let self = self else { return }
-                print(item.fullName)
-                self.requestUnstarredRepos(fullRepoName: item.fullName)
-            })
-            .disposed(by: disposeBag)
-
         self.useCase.successReqeustUserInfo
             .asSignal()
             .emit(onNext: { [weak self] info in
@@ -126,18 +116,6 @@ final class ProfileViewModel: ViewModelType {
             })
             .disposed(by: disposeBag)
 
-        self.useCase.successUnstarred
-            .asSignal()
-            .withLatestFrom(input.unstarButtonTap)
-            .emit(onNext: { [weak self] item in
-                guard let self = self else { return }
-                ProgressHUD.show("좋아요 취소", icon: .succeed, interaction: false)
-                self.currentPage = 1
-                self.requestUserStarredRepos()
-            })
-            .disposed(by: disposeBag)
-
-
         return Output(
             userInfo: userInfo.asSignal(),
             repoList: repoList.asDriver(),
@@ -162,9 +140,5 @@ extension ProfileViewModel {
 
     private func requestUserStarredRepos() {
         self.useCase.requestUserStarredRepos(owners: "Youngminah", page: currentPage)
-    }
-
-    private func requestUnstarredRepos(fullRepoName: String) {
-        self.useCase.requestUnstarredRepos(fullRepoName: fullRepoName)
     }
 }

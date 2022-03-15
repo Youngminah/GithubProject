@@ -20,14 +20,11 @@ final class SearchViewController: BaseViewController {
     private lazy var input = SearchViewModel.Input(
         pullRefresh: refreshControl.rx.controlEvent(.valueChanged).asSignal(),
         didScrollToBottom: tableView.rx.didScrollToBottom.asSignal(onErrorJustReturn: ()),
-        searchBarText: searchBar.shouldLoadResult.asSignal(onErrorJustReturn: ""),
-        unstarButtonTap: unstarButtonTap.asSignal()
+        searchBarText: searchBar.shouldLoadResult.asSignal(onErrorJustReturn: "")
     )
     private lazy var output = viewModel.transform(input: input)
     private var viewModel: SearchViewModel
     private let disposeBag = DisposeBag()
-
-    private let unstarButtonTap = PublishRelay<RepoItem>()
 
     private lazy var dataSource = RxTableViewSectionedReloadDataSource<RepoSection.RepoSectionModel>(
         configureCell: { [weak self] dataSource, tableView, indexPath, item in
@@ -36,11 +33,6 @@ final class SearchViewController: BaseViewController {
             case .firstItem(let item):
                 let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryCell.identifier) as! RepositoryCell
                 cell.configure(item: item)
-
-                cell.starButton.rx.tap.asSignal()
-                    .map { return item }
-                    .emit(to: self.unstarButtonTap)
-                    .disposed(by: cell.disposeBag)
 
                 return cell
             }

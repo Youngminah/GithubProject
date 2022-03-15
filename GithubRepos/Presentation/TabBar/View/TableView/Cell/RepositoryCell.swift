@@ -6,13 +6,21 @@
 //
 
 import UIKit
+import ProgressHUD
 import RxCocoa
 import RxSwift
 import SnapKit
 
 final class RepositoryCell: BaseTableViewCell {
 
+    enum RepositoryCase {
+        case all
+        case starred
+    }
+
     static let identifier = "RepositoryCell"
+
+    private let githubRepository: GithubRepositoryType
 
     private lazy var collectionView: DynamicCollectionView = {
         let layout = CollectionViewLeftAlignFlowLayout()
@@ -20,7 +28,9 @@ final class RepositoryCell: BaseTableViewCell {
         return collectionView
     }()
 
-    private let starButton = UIButton()
+    let starButton = StarButton()
+    var repositoryCase: RepositoryCase = .all
+
     private let repoImageView = UIImageView(image: UIImage(systemName: "text.book.closed"))
     private let starImageView = UIImageView(image: UIImage(systemName: "star.fill"))
     private let languageColorView = CircleView()
@@ -31,9 +41,18 @@ final class RepositoryCell: BaseTableViewCell {
     private let updateDateLabel = DefaultLabel(font: .bodyTinyRegular, textColor: .gray500)
 
     private let topicList = PublishRelay<[String]>()
+    private let isStarred = PublishRelay<Bool>()
+    private let successReqeustStar = PublishRelay<Void>()
+    private let successReqeustUnstar = PublishRelay<Void>()
+    private let failStarError = PublishRelay<GithubServerError>()
+
     var disposeBag = DisposeBag()
 
+    private var repoName = ""
+    private var starCount = 0
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        self.githubRepository = GithubRepository()
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         bind()
     }
@@ -58,6 +77,52 @@ final class RepositoryCell: BaseTableViewCell {
             ) { index, topic, cell in
                 cell.configure(topic: topic)
             }
+            .disposed(by: disposeBag)
+
+        self.starButton.rx.tap.asSignal()
+            .throttle(.seconds(1))
+            .map { [weak self] _ -> Bool in
+                guard let self = self else { return false }
+                return self.starButton.isSelected
+            }
+            .distinctUntilChanged()
+            .emit(onNext: { [weak self] isSelected in
+                guard let self = self else { return }
+                if isSelected {
+                    self.requestUnstar(repos: self.repoName)
+                } else {
+                    self.requestStar(repos: self.repoName)
+                }
+            })
+            .disposed(by: disposeBag)
+
+        self.successReqeustStar
+            .asSignal()
+            .do (onNext: { [weak self] _ in
+                guard let self = self else { return }
+                ProgressHUD.show("좋아요 성공", icon: .heart, interaction: false)
+                self.starCount += 1
+                self.starCountLabel.text = self.starCount.toCommaString
+            })
+            .map { true }
+            .emit(to: self.starButton.rx.isSelected)
+            .disposed(by: disposeBag)
+
+        self.successReqeustUnstar
+            .asSignal()
+            .do (onNext: { [weak self] _ in
+                guard let self = self else { return }
+                ProgressHUD.show("좋아요 취소", icon: .succeed, interaction: false)
+                self.starCount -= 1
+                self.starCountLabel.text = self.starCount.toCommaString
+            })
+            .map { false }
+            .emit(to: self.starButton.rx.isSelected)
+            .disposed(by: disposeBag)
+
+        self.isStarred
+            .asSignal()
+            .emit(to: self.starButton.rx.isSelected)
             .disposed(by: disposeBag)
     }
 
@@ -125,38 +190,90 @@ final class RepositoryCell: BaseTableViewCell {
             make.top.equalTo(descriptionLabel.snp.bottom).offset(16)
             make.left.equalToSuperview().offset(16)
             make.right.equalToSuperview().offset(-16)
-            make.bottom.equalTo(starCountLabel.snp.top).offset(-10).priority(.low)
+            make.bottom.equalTo(starCountLabel.snp.top).offset(-10).priority(.low) // 셀프사이징
         }
     }
 
     override func setConfiguration() {
         super.setConfiguration()
+        contentView.isUserInteractionEnabled = true
         nameLabel.textAlignment = .natural
         descriptionLabel.textAlignment = .natural
-        starButton.setImage(UIImage(systemName: "star"), for: .normal)
-        starButton.setImage(UIImage(systemName: "star.fill"), for: .selected)
-        starButton.imageView?.tintColor = .systemYellow
         repoImageView.tintColor = .orange
         starImageView.tintColor = .gray500
         languageLabel.lineBreakMode = .byCharWrapping
         collectionView.register(TopicCell.self, forCellWithReuseIdentifier: TopicCell.identifier)
         collectionView.isScrollEnabled = false
+        collectionView.backgroundColor = .secondarySystemGroupedBackground
     }
 
     func configure(item: RepoItem) {
+        repoName = item.fullName
+        starCount = item.star
         nameLabel.text = item.fullName
         descriptionLabel.text = item.description
         starCountLabel.text = item.star.toCommaString
         languageLabel.text = item.language
         updateDateLabel.text = item.updatedAt.getElapsedInterval()
         updateDateLabel.textAlignment = .right
-        languageColorView.setColor(language: LanguageCase(rawValue: item.language ?? "nothing") ?? .unknown)
+        languageColorView.setColor(language: LanguageCase(rawValue: item.language ?? "Empty") ?? .unknown)
         if item.topics == [] {
             topicList.accept(["Nothing"])
         } else {
             topicList.accept(item.topics)
         }
         layoutIfNeeded()
+        switch repositoryCase {
+        case .all:
+            requestIsStar(repo: item.fullName)
+        case .starred:
+            starButton.isSelected = true
+        }
+    }
+}
+
+//MARK: - 좋아요 로직
+extension RepositoryCell {
+
+    private func requestIsStar(repo: String) {
+        self.githubRepository.requestIsStar(repos: repo)  { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(_):
+                self.isStarred.accept(true)
+            case .failure(let error):
+                switch error {
+                case .notFoundError:
+                    self.isStarred.accept(false)
+                default:
+                    self.failStarError.accept(error)
+                }
+            }
+        }
+    }
+
+    private func requestStar(repos: String) {
+        self.githubRepository.requestStar(repos: repos) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(_):
+                self.successReqeustStar.accept(())
+            case .failure(let error):
+                self.failStarError.accept(error)
+            }
+        }
+    }
+
+    private func requestUnstar(repos: String) {
+        self.githubRepository.requestUnstar(repos: repos) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(_):
+                self.successReqeustUnstar.accept(())
+            case .failure(let error):
+                self.failStarError.accept(error)
+            }
+        }
     }
 }
 

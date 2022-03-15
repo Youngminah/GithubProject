@@ -20,15 +20,13 @@ final class ProfileViewController: BaseViewController {
     private lazy var input = ProfileViewModel.Input(
         viewDidLoad: viewDidLoadEvent.asObservable(),
         pullRefresh: refreshControl.rx.controlEvent(.valueChanged).asSignal(),
-        didScrollToBottom: tableView.rx.didScrollToBottom.asSignal(onErrorJustReturn: ()),
-        unstarButtonTap: unstarButtonTap.asSignal()
+        didScrollToBottom: tableView.rx.didScrollToBottom.asSignal(onErrorJustReturn: ())
     )
     private lazy var output = viewModel.transform(input: input)
     private var viewModel: ProfileViewModel
     private let disposeBag = DisposeBag()
 
     private let viewDidLoadEvent = PublishRelay<Void>()
-    private let unstarButtonTap = PublishRelay<RepoItem>()
 
     private lazy var dataSource = RxTableViewSectionedReloadDataSource<RepoSection.RepoSectionModel>(
         configureCell: { [weak self] dataSource, tableView, indexPath, item in
@@ -36,12 +34,9 @@ final class ProfileViewController: BaseViewController {
             switch item {
             case .firstItem(let item):
                 let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryCell.identifier) as! RepositoryCell
-                cell.configure(item: item)
 
-                cell.starButton.rx.tap.asSignal()
-                    .map { return item }
-                    .emit(to: self.unstarButtonTap)
-                    .disposed(by: cell.disposeBag)
+                cell.repositoryCase = .starred
+                cell.configure(item: item)
 
                 return cell
             }
@@ -134,7 +129,6 @@ final class ProfileViewController: BaseViewController {
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.refreshControl = refreshControl
-        //tableView.sectionHeaderHeight = ProfileHeaderView.height
         tableView.estimatedRowHeight = 80
     }
 }

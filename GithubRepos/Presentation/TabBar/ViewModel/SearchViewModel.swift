@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ProgressHUD
 import RxCocoa
 import RxSwift
 
@@ -41,7 +42,6 @@ final class SearchViewModel: ViewModelType {
     }
 
     func transform(input: Input) -> Output {
-
         Signal
             .merge(
                 input.searchBarText,
@@ -68,7 +68,6 @@ final class SearchViewModel: ViewModelType {
             }
             .emit(onNext: { [weak self] _ in
                 guard let self = self else { return }
-                print("바텀!!")
                 self.isPagination = true
                 self.bottomSpinnerAction.accept(true)
                 self.requestSearchRepos(text: self.currentText)

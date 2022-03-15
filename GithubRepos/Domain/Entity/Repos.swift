@@ -18,7 +18,7 @@ struct RepoItem: Equatable {
     let fullName: String
     let description: String?
     let topics: [String]
-    let star: Int
+    var star: Int
     let fork: Int
     let language: String?
     let updatedAt: Date
