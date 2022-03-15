@@ -14,6 +14,7 @@ enum LanguageCase: String, CaseIterable {
     case css = "CSS"
     case c = "C"
     case python = "Python"
+    case empty = "Empty"
     case unknown
 
     var color: UIColor {
@@ -28,6 +29,8 @@ enum LanguageCase: String, CaseIterable {
             return .yellow200
         case .python:
             return .purple
+        case .empty:
+            return .systemBackground
         case .unknown:
             return .gray500
         }
