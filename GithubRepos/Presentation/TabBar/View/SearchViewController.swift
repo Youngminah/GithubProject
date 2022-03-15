@@ -7,6 +7,7 @@
 
 import UIKit
 import RxCocoa
+import RxDataSources
 import RxSwift
 import SnapKit
 
@@ -19,11 +20,31 @@ final class SearchViewController: BaseViewController {
     private lazy var input = SearchViewModel.Input(
         pullRefresh: refreshControl.rx.controlEvent(.valueChanged).asSignal(),
         didScrollToBottom: tableView.rx.didScrollToBottom.asSignal(onErrorJustReturn: ()),
-        searchBarText: searchBar.shouldLoadResult.asSignal(onErrorJustReturn: "")
+        searchBarText: searchBar.shouldLoadResult.asSignal(onErrorJustReturn: ""),
+        unstarButtonTap: unstarButtonTap.asSignal()
     )
     private lazy var output = viewModel.transform(input: input)
     private var viewModel: SearchViewModel
     private let disposeBag = DisposeBag()
+
+    private let unstarButtonTap = PublishRelay<RepoItem>()
+
+    private lazy var dataSource = RxTableViewSectionedReloadDataSource<RepoSection.RepoSectionModel>(
+        configureCell: { [weak self] dataSource, tableView, indexPath, item in
+            guard let self = self else { return UITableViewCell() }
+            switch item {
+            case .firstItem(let item):
+                let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryCell.identifier) as! RepositoryCell
+                cell.configure(item: item)
+
+                cell.starButton.rx.tap.asSignal()
+                    .map { return item }
+                    .emit(to: self.unstarButtonTap)
+                    .disposed(by: cell.disposeBag)
+
+                return cell
+            }
+        })
 
     private let viewDidLoadEvent = PublishRelay<Void>()
 
@@ -46,16 +67,16 @@ final class SearchViewController: BaseViewController {
         output.repoList
             .map { return $0.count <= 0 }
             .drive(tableView.rx.isEmpty(
-                title: "검색 결과가 없어요.")
+                title: "검색 결과가 없어요.",
+                imageName: "magnifyingglass")
             )
             .disposed(by: disposeBag)
 
         output.repoList
-            .drive(tableView.rx.items) { tv, index, element in
-                let cell = tv.dequeueReusableCell(withIdentifier: RepositoryCell.identifier) as! RepositoryCell
-                cell.configure(item: element)
-                return cell
+            .map { value in
+                return [RepoSection.RepoSectionModel(model: 0, items: value.map { RepoSection.RepoItems.firstItem($0) })]
             }
+            .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
 
         output.refreshAction
