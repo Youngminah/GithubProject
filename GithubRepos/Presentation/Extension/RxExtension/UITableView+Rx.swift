@@ -11,10 +11,10 @@ import RxSwift
 
 extension Reactive where Base: UITableView {
 
-    func isEmpty(title: String) -> Binder<Bool> {
+    func isEmpty(title: String, imageName: String) -> Binder<Bool> {
         return Binder(base) { tableView, isEmpty in
             if isEmpty {
-                tableView.setEmptyBackgroundView(title: title)
+                tableView.setEmptyBackgroundView(title: title, imageName: imageName)
             } else {
                 tableView.removeBackgroundView()
             }

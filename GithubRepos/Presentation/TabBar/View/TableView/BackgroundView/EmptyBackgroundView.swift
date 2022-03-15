@@ -16,9 +16,10 @@ final class EmptyBackgroundView: UIView {
         super.init(frame: frame)
     }
 
-    convenience init(frame: CGRect, title: String) {
+    convenience init(frame: CGRect, title: String, imageName: String) {
         self.init(frame: frame)
         titleLabel.text = title
+        emptyImageView.image = UIImage(systemName: imageName)
     }
 
     override func layoutSubviews() {

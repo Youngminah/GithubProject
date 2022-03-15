@@ -9,13 +9,14 @@ import UIKit.UITableView
 
 extension UITableView {
 
-    func setEmptyBackgroundView(title: String) {
+    func setEmptyBackgroundView(title: String, imageName: String) {
         self.backgroundView = EmptyBackgroundView(
             frame: CGRect(x: 0,
                           y: 0,
                           width: self.bounds.width,
                           height: self.bounds.height),
-            title: title)
+            title: title,
+        imageName: imageName)
         self.isScrollEnabled = false
         self.separatorStyle = .none
     }
