@@ -52,17 +52,4 @@ extension ProfileUseCase {
             }
         }
     }
-
-    func requestUnstarredRepos(fullRepoName: String) {
-        print("좋아요 취소한 레포 -->", fullRepoName)
-        self.githubRepository.requestUnstar(repos: fullRepoName) { [weak self] response in
-            guard let self = self else { return }
-            switch response {
-            case .success(_):
-                self.successUnstarred.accept(())
-            case .failure(let error):
-                self.failGithubError.accept(error)
-            }
-        }
-    }
 }

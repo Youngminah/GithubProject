@@ -40,28 +40,4 @@ extension SearchUseCase {
             }
         }
     }
-
-    func requestStar(repos: String) {
-        self.githubRepository.requestStar(repos: repos) { [weak self] response in
-            guard let self = self else { return }
-            switch response {
-            case .success(_):
-                self.successReqeustStar.accept(())
-            case .failure(let error):
-                self.failGithubError.accept(error)
-            }
-        }
-    }
-
-    func requestUnStar(repos: String) {
-        self.githubRepository.requestUnstar(repos: repos) { [weak self] response in
-            guard let self = self else { return }
-            switch response {
-            case .success(_):
-                self.successReqeustUnstar.accept(())
-            case .failure(let error):
-                self.failGithubError.accept(error)
-            }
-        }
-    }
 }
