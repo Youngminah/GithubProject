@@ -15,7 +15,7 @@ enum GithubTarget {
     case search(parameters: DictionaryType)
     // users
     case userStarredRepos(owners: String, parameters: DictionaryType)
-    case user(owners: String)
+    case user
     // star
     case isStar(repos: String)
     case star(repos: String)
@@ -37,8 +37,8 @@ extension GithubTarget: TargetType {
             return "/search/repositories"
         case .userStarredRepos(let owners, _):
             return "/users/\(owners)/starred"
-        case .user(let owners):
-            return "/users/\(owners)"
+        case .user:
+            return "/user"
         case .isStar(let repos),
              .star(let repos),
              .unstar(let repos):
@@ -83,22 +83,23 @@ extension GithubTarget: TargetType {
 
     var headers: [String: String]? {
         switch self {
-        case .search,
-             .userStarredRepos,
-             .user:
-//            return [
-//                "Accept": "application/vnd.github.v3+json",
-//            ]
-            let token = "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"
-            return [
-                "Accept": "application/vnd.github.v3+json",
-                "Authorization": "Bearer \(token)"
-            ]
+        case .search:
+            if let token = UserDefaults.standard.string(forKey: "accessToken") {
+                return [
+                    "Accept": "application/vnd.github.v3+json",
+                    "Authorization": "Bearer \(token)"
+                ]
+            } else {
+                return [
+                    "Accept": "application/vnd.github.v3+json",
+                ]
+            }
         case .isStar,
+             .userStarredRepos,
+             .user,
              .star,
              .unstar:
-            //let token = UserDefaults.standard.string(forKey: "token")!
-            let token = "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"
+            let token = UserDefaults.standard.string(forKey: "accessToken")!
             return [
                 "Accept": "application/vnd.github.v3+json",
                 "Authorization": "Bearer \(token)"
