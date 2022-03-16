@@ -21,6 +21,8 @@ final class SearchBar: UISearchBar {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.accessibilityIdentifier = "searchBar"
+        self.searchButton.accessibilityIdentifier = "searchButton"
         setConfigurations()
         setConstraints()
         bind()
