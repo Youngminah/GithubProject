@@ -16,7 +16,7 @@ final class ProfileViewModel: ViewModelType {
     private let useCase: ProfileUseCase
 
     struct Input {
-        let viewDidLoad: Observable<Void>
+        let viewDidLoad: Signal<Void>
         let pullRefresh: Signal<Void>
         let didScrollToBottom: Signal<Void>
     }
@@ -48,12 +48,14 @@ final class ProfileViewModel: ViewModelType {
     func transform(input: Input) -> Output {
         Signal
             .merge(
-                input.viewDidLoad.asSignal(onErrorJustReturn: ()),
+                input.viewDidLoad,
                 input.pullRefresh.delay(.milliseconds(500))
             )
             .emit(onNext: { [weak self] _ in
                 guard let self = self else { return }
-                self.requestUserInfo()
+                if UserDefaults.standard.string(forKey: "accessToken") != nil {
+                    self.requestUserInfo()
+                }
             })
             .disposed(by: disposeBag)
 
@@ -110,6 +112,7 @@ final class ProfileViewModel: ViewModelType {
             .asSignal()
             .emit(onNext: { [weak self]  _ in
                 guard let self = self else { return }
+                ProgressHUD.show("네트워크 오류", icon: .failed, interaction: false)
                 self.repoList.accept([])
                 self.resetLoadingAction()
                 self.failRequestAction.accept(())
@@ -135,10 +138,10 @@ final class ProfileViewModel: ViewModelType {
 extension ProfileViewModel {
 
     private func requestUserInfo() {
-        self.useCase.requestUserInfo(owners: "Youngminah")
+        self.useCase.requestUserInfo()
     }
 
     private func requestUserStarredRepos() {
-        self.useCase.requestUserStarredRepos(owners: "Youngminah", page: currentPage)
+        self.useCase.requestUserStarredRepos(page: currentPage)
     }
 }
