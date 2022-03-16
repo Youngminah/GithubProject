@@ -20,7 +20,7 @@ final class TabBarCoordinator: Coordinator {
         navigationController.setNavigationBarHidden(false, animated: false)
         self.tabBarController = GithubTabBarViewController(
             viewModel: AuthViewModel(
-                useCase: AuthUseCase(
+                useCase: DefaultAuthUseCase(
                     authRepository: AuthRepository()
                 )
             )
@@ -72,7 +72,7 @@ final class TabBarCoordinator: Coordinator {
             let vc = SearchViewController(
                 viewModel: SearchViewModel(
                     coordinator: self,
-                    useCase: SearchUseCase(
+                    useCase: DefaultSearchUseCase(
                         githubRepository: GithubRepository()
                     )
                 )
@@ -85,7 +85,7 @@ final class TabBarCoordinator: Coordinator {
             let vc = ProfileViewController(
                 viewModel: ProfileViewModel(
                     coordinator: self,
-                    useCase: ProfileUseCase(
+                    useCase: DefaultProfileUseCase(
                         githubRepository: GithubRepository()
                     )
                 )
