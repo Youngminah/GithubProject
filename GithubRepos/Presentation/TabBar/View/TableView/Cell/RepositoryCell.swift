@@ -120,6 +120,13 @@ final class RepositoryCell: BaseTableViewCell {
             .emit(to: self.starButton.rx.isSelected)
             .disposed(by: disposeBag)
 
+        self.failStarError
+            .asSignal()
+            .emit(onNext: { _ in
+                ProgressHUD.show("좋아요 실패", icon: .failed, interaction: false)
+            })
+            .disposed(by: disposeBag)
+
         self.isStarred
             .asSignal()
             .emit(to: self.starButton.rx.isSelected)
@@ -128,7 +135,6 @@ final class RepositoryCell: BaseTableViewCell {
 
     override func setView() {
         super.setView()
-        contentView.addSubview(starButton)
         contentView.addSubview(starImageView)
         contentView.addSubview(repoImageView)
         contentView.addSubview(nameLabel)
@@ -142,11 +148,6 @@ final class RepositoryCell: BaseTableViewCell {
 
     override func setConstraints() {
         super.setConstraints()
-        starButton.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(16)
-            make.right.equalToSuperview().offset(-16)
-            make.width.height.equalTo(40)
-        }
         repoImageView.snp.makeConstraints { make in
             make.top.left.equalToSuperview().offset(20)
             make.width.height.equalTo(25)
@@ -154,7 +155,7 @@ final class RepositoryCell: BaseTableViewCell {
         nameLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(16)
             make.left.equalTo(repoImageView.snp.right).offset(10)
-            make.right.equalTo(starButton.snp.left).offset(-16)
+            make.right.equalToSuperview().offset(-56)
         }
         descriptionLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(16)
@@ -223,11 +224,21 @@ final class RepositoryCell: BaseTableViewCell {
             topicList.accept(item.topics)
         }
         layoutIfNeeded()
-        switch repositoryCase {
-        case .all:
-            requestIsStar(repo: item.fullName)
-        case .starred:
-            starButton.isSelected = true
+        if UserDefaults.standard.string(forKey: "accessToken") != nil {
+            contentView.addSubview(starButton)
+            starButton.snp.makeConstraints { make in
+                make.top.equalToSuperview().offset(16)
+                make.right.equalToSuperview().offset(-16)
+                make.width.height.equalTo(40)
+            }
+            switch repositoryCase {
+            case .all:
+                requestIsStar(repo: item.fullName)
+            case .starred:
+                starButton.isSelected = true
+            }
+        } else {
+            starButton.removeFromSuperview()
         }
     }
 }
