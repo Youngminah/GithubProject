@@ -49,7 +49,6 @@ final class SearchBar: UISearchBar {
                 $1 ?? ""
             }
             .filter { !$0.isEmpty }
-            .distinctUntilChanged()
             .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
     }
 
