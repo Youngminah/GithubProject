@@ -12,13 +12,19 @@ final class TabBarCoordinator: Coordinator {
     weak var delegate: CoordinatorDelegate?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-    var tabBarController: UITabBarController
+    var tabBarController: GithubTabBarViewController
     var type: CoordinatorStyleCase = .tab
 
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
         navigationController.setNavigationBarHidden(false, animated: false)
-        self.tabBarController = GithubTabBarViewController()
+        self.tabBarController = GithubTabBarViewController(
+            viewModel: AuthViewModel(
+                useCase: AuthUseCase(
+                    authRepository: AuthRepository()
+                )
+            )
+        )
     }
 
     func start() {
@@ -71,6 +77,7 @@ final class TabBarCoordinator: Coordinator {
                     )
                 )
             )
+            tabBarController.authDelegate = vc
             vc.tabBarItem = self.configureTabBarItem(of: .search)
             vc.tabBarItem.selectedImage = UIImage(systemName: page.tabSelectedIconName())
             return vc
