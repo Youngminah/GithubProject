@@ -22,6 +22,12 @@ final class EmptyBackgroundView: UIView {
         emptyImageView.image = UIImage(systemName: imageName)
     }
 
+    convenience init(title: String, imageName: String) {
+        self.init()
+        titleLabel.text = title
+        emptyImageView.image = UIImage(systemName: imageName)
+    }
+
     override func layoutSubviews() {
         super.layoutSubviews()
         setConfigurations()
