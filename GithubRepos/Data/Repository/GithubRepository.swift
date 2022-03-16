@@ -69,8 +69,8 @@ extension GithubRepository {
         }
     }
 
-    func requestUserInfo(owners: String, completion: @escaping (Result<UserInfo, GithubServerError>) -> Void) {
-        provider.request(.user(owners: owners)) { result in
+    func requestUserInfo(completion: @escaping (Result<UserInfo, GithubServerError>) -> Void) {
+        provider.request(.user) { result in
             switch result {
             case .success(let response):
                 let data = try? JSONDecoder().decode(UserInfoResponseDTO.self, from: response.data)
@@ -109,10 +109,8 @@ extension GithubRepository {
     ) {
         switch result {
         case .success(let response):
-            print(response)
             completion(.success(response.statusCode))
         case .failure(let error):
-            print(error)
             completion(.failure(GithubServerError(rawValue: error.response!.statusCode) ?? .unknown))
         }
     }
