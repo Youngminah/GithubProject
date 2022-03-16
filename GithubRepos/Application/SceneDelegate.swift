@@ -37,5 +37,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func sceneDidEnterBackground(_ scene: UIScene) {
     }
+
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let url = URLContexts.first?.url {
+            let components = URLComponents(string: url.absoluteString)
+            let items = components?.queryItems ?? []
+            for item in items {
+                if item.name == "code" {
+                    let notification = Notification(name: Notification.Name(rawValue: "DeepLink"), object: item.value)
+                    NotificationCenter.default.post(notification)
+                }
+            }
+        }
+    }
 }
 
