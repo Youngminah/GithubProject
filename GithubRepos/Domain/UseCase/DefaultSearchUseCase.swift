@@ -9,7 +9,11 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-final class SearchUseCase {
+protocol SearchUseCase {
+
+}
+
+final class DefaultSearchUseCase {
 
     private let githubRepository: GithubRepositoryType
     private let disposeBag = DisposeBag()

@@ -9,7 +9,17 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-final class AuthUseCase {
+protocol SearchUseCase {
+
+    var successReqeustSearch: PublishRelay<Repos> { get set }
+    var successReqeustStar: PublishRelay<Void> { get set }
+    var successReqeustUnstar: PublishRelay<Void> { get set }
+    var failGithubError: PublishRelay<GithubServerError> { get set }
+
+    func requestSearch(searchName: String, page: Int)
+}
+
+final class DefaultAuthUseCase {
 
     private let authRepository: AuthRepositoryType
     private let disposeBag = DisposeBag()
@@ -24,7 +34,7 @@ final class AuthUseCase {
     }
 }
 
-extension AuthUseCase {
+extension DefaultAuthUseCase {
 
     func requestLogin(code: String) {
         let clientID = "23a655cd597603f9f109" // 임시

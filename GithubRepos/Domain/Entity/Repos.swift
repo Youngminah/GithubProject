@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct Repos {
+struct Repos: Equatable {
 
     let items: [RepoItem]
 }
 
-struct RepoItem: Equatable {
+struct RepoItem: Equatable, Identifiable {
 
     let id: Int
     let fullName: String
@@ -22,4 +22,8 @@ struct RepoItem: Equatable {
     let fork: Int
     let language: String?
     let updatedAt: Date
+
+    static func == (lhs: RepoItem, rhs: RepoItem) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
