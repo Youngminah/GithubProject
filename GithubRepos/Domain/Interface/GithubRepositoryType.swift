@@ -28,7 +28,6 @@ protocol GithubRepositoryType: AnyObject {
     )
 
     func requestUserInfo(             // 유저 정보 조회 API
-        owners: String,
         completion: @escaping (
             Result< UserInfo,
             GithubServerError>
