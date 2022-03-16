@@ -34,7 +34,6 @@
 		BB6D58C527DCD66700C96487 /* ReposRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58C427DCD66700C96487 /* ReposRequestDTO.swift */; };
 		BB6D58C727DCD68300C96487 /* UserReposRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58C627DCD68300C96487 /* UserReposRequestDTO.swift */; };
 		BB6D58C927DCD70E00C96487 /* ReposResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58C827DCD70E00C96487 /* ReposResponseDTO.swift */; };
-		BB6D58CB27DCD72000C96487 /* UserReposResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58CA27DCD72000C96487 /* UserReposResponseDTO.swift */; };
 		BB6D58CD27DCD73E00C96487 /* UserInfoResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58CC27DCD73E00C96487 /* UserInfoResponseDTO.swift */; };
 		BB6D58CF27DCDE0800C96487 /* ReposQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58CE27DCDE0800C96487 /* ReposQuery.swift */; };
 		BB6D58D127DCDEDC00C96487 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58D027DCDEDC00C96487 /* UserInfo.swift */; };
@@ -73,6 +72,11 @@
 		BB6D592327DFD3C800C96487 /* UIImageView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D592227DFD3C800C96487 /* UIImageView+Ex.swift */; };
 		BB6D592527E0622800C96487 /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D592427E0622800C96487 /* StarButton.swift */; };
 		BB6D592727E0929C00C96487 /* StarUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D592627E0929C00C96487 /* StarUseCase.swift */; };
+		BB6D59A427E23CE500C96487 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D59A327E23CE500C96487 /* AuthRepository.swift */; };
+		BB6D59A627E23D1100C96487 /* AuthTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D59A527E23D1100C96487 /* AuthTarget.swift */; };
+		BB6D59A827E23E6800C96487 /* AuthRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D59A727E23E6800C96487 /* AuthRepositoryType.swift */; };
+		BB6D59AB27E2478200C96487 /* LoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D59AA27E2478200C96487 /* LoginResponseDTO.swift */; };
+		BB6D59AD27E247D900C96487 /* LoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D59AC27E247D900C96487 /* LoginInfo.swift */; };
 		BBFA000027DB871B00897CEE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAFFFF27DB871B00897CEE /* Coordinator.swift */; };
 		BBFA000227DB872700897CEE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000127DB872700897CEE /* AppCoordinator.swift */; };
 		BBFA000427DB873E00897CEE /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */; };
@@ -131,7 +135,6 @@
 		BB6D58C427DCD66700C96487 /* ReposRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposRequestDTO.swift; sourceTree = "<group>"; };
 		BB6D58C627DCD68300C96487 /* UserReposRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReposRequestDTO.swift; sourceTree = "<group>"; };
 		BB6D58C827DCD70E00C96487 /* ReposResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposResponseDTO.swift; sourceTree = "<group>"; };
-		BB6D58CA27DCD72000C96487 /* UserReposResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReposResponseDTO.swift; sourceTree = "<group>"; };
 		BB6D58CC27DCD73E00C96487 /* UserInfoResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponseDTO.swift; sourceTree = "<group>"; };
 		BB6D58CE27DCDE0800C96487 /* ReposQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposQuery.swift; sourceTree = "<group>"; };
 		BB6D58D027DCDEDC00C96487 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -169,6 +172,11 @@
 		BB6D592227DFD3C800C96487 /* UIImageView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ex.swift"; sourceTree = "<group>"; };
 		BB6D592427E0622800C96487 /* StarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButton.swift; sourceTree = "<group>"; };
 		BB6D592627E0929C00C96487 /* StarUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarUseCase.swift; sourceTree = "<group>"; };
+		BB6D59A327E23CE500C96487 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		BB6D59A527E23D1100C96487 /* AuthTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTarget.swift; sourceTree = "<group>"; };
+		BB6D59A727E23E6800C96487 /* AuthRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryType.swift; sourceTree = "<group>"; };
+		BB6D59AA27E2478200C96487 /* LoginResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDTO.swift; sourceTree = "<group>"; };
+		BB6D59AC27E247D900C96487 /* LoginInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInfo.swift; sourceTree = "<group>"; };
 		BBFA000127DB872700897CEE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		BBFAFFC827DB813F00897CEE /* GithubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,8 +301,8 @@
 			isa = PBXGroup;
 			children = (
 				BB6D58C827DCD70E00C96487 /* ReposResponseDTO.swift */,
-				BB6D58CA27DCD72000C96487 /* UserReposResponseDTO.swift */,
 				BB6D58CC27DCD73E00C96487 /* UserInfoResponseDTO.swift */,
+				BB6D59AA27E2478200C96487 /* LoginResponseDTO.swift */,
 			);
 			path = ResponseDTO;
 			sourceTree = "<group>";
@@ -502,6 +510,7 @@
 		BBFA000C27DB8A0100897CEE /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BB6D59A527E23D1100C96487 /* AuthTarget.swift */,
 				BB6D589B27DC74B900C96487 /* GithubTarget.swift */,
 				BB6D58BA27DCC59E00C96487 /* APIConstant.swift */,
 				BB6D58BC27DCC5B700C96487 /* APIEnvironment.swift */,
@@ -523,6 +532,7 @@
 			isa = PBXGroup;
 			children = (
 				BB6D58C027DCD34C00C96487 /* GithubRepositoryType.swift */,
+				BB6D59A727E23E6800C96487 /* AuthRepositoryType.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -544,6 +554,7 @@
 				BB6D58CE27DCDE0800C96487 /* ReposQuery.swift */,
 				BB6D58D027DCDEDC00C96487 /* UserInfo.swift */,
 				BB6D58D227DCDEE500C96487 /* Repos.swift */,
+				BB6D59AC27E247D900C96487 /* LoginInfo.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -561,6 +572,7 @@
 			isa = PBXGroup;
 			children = (
 				BB6D58BE27DCD30600C96487 /* GithubRepository.swift */,
+				BB6D59A327E23CE500C96487 /* AuthRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -801,12 +813,12 @@
 				BB6D58A627DC796D00C96487 /* AppFont.swift in Sources */,
 				BB6D58D527DCEB8100C96487 /* SearchUseCase.swift in Sources */,
 				BB6D58BD27DCC5B700C96487 /* APIEnvironment.swift in Sources */,
-				BB6D58CB27DCD72000C96487 /* UserReposResponseDTO.swift in Sources */,
 				BB6D58CD27DCD73E00C96487 /* UserInfoResponseDTO.swift in Sources */,
 				BB6D58F527DD06D600C96487 /* PaddingLabel.swift in Sources */,
 				BB6D58D327DCDEE500C96487 /* Repos.swift in Sources */,
 				BB6D58FF27DDF57900C96487 /* CircleView.swift in Sources */,
 				BB6D591927DF1B5000C96487 /* RepoSection.swift in Sources */,
+				BB6D59AB27E2478200C96487 /* LoginResponseDTO.swift in Sources */,
 				BB6D590827DDFF9A00C96487 /* UITableView+Rx.swift in Sources */,
 				BB6D589327DC5E9B00C96487 /* ProfileViewController.swift in Sources */,
 				BB6D592327DFD3C800C96487 /* UIImageView+Ex.swift in Sources */,
@@ -814,8 +826,10 @@
 				BB6D58EB27DCFC8100C96487 /* BaseCollectionViewCell.swift in Sources */,
 				BB6D58E727DCFC6900C96487 /* BaseViewController.swift in Sources */,
 				BB6D589C27DC74B900C96487 /* GithubTarget.swift in Sources */,
+				BB6D59AD27E247D900C96487 /* LoginInfo.swift in Sources */,
 				BB6D58C927DCD70E00C96487 /* ReposResponseDTO.swift in Sources */,
 				BB6D58E127DCFA8800C96487 /* ViewModelType.swift in Sources */,
+				BB6D59A827E23E6800C96487 /* AuthRepositoryType.swift in Sources */,
 				BB6D588D27DC5AC400C96487 /* TabBarCoordinator.swift in Sources */,
 				BB6D58D727DCEBA300C96487 /* ProfileUseCase.swift in Sources */,
 				BB6D58F327DD030500C96487 /* TopicCell.swift in Sources */,
@@ -829,6 +843,7 @@
 				BB6D58E927DCFC7400C96487 /* BaseTableViewCell.swift in Sources */,
 				BB6D58CF27DCDE0800C96487 /* ReposQuery.swift in Sources */,
 				BBFA000427DB873E00897CEE /* CoordinatorDelegate.swift in Sources */,
+				BB6D59A627E23D1100C96487 /* AuthTarget.swift in Sources */,
 				BB6D58FB27DD0FFA00C96487 /* CollectionViewLeftAlignFlowLayout.swift in Sources */,
 				BB6D592127DFD35E00C96487 /* ImageCacheManager.swift in Sources */,
 				BB6D590127DDF6E900C96487 /* LanguageCase.swift in Sources */,
@@ -853,6 +868,7 @@
 				BB6D58E327DCFB3100C96487 /* AuthUseCase.swift in Sources */,
 				BB6D589E27DC754F00C96487 /* GithubTabBarViewController.swift in Sources */,
 				BBFAFFFD27DB86E700897CEE /* AppAppearance.swift in Sources */,
+				BB6D59A427E23CE500C96487 /* AuthRepository.swift in Sources */,
 				BB6D58C727DCD68300C96487 /* UserReposRequestDTO.swift in Sources */,
 				BB6D58B927DCC57700C96487 /* GithubTarget+StubData.swift in Sources */,
 			);
