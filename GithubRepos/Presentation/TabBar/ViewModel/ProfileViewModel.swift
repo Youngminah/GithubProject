@@ -79,7 +79,6 @@ final class ProfileViewModel: ViewModelType {
             }
             .emit(onNext: { [weak self] _ in
                 guard let self = self else { return }
-                print("바텀!!")
                 self.isPagination = true
                 self.bottomSpinnerAction.accept(true)
                 self.requestUserStarredRepos()
@@ -90,7 +89,6 @@ final class ProfileViewModel: ViewModelType {
             .asSignal()
             .emit(onNext: { [weak self] info in
                 guard let self = self else { return }
-                //print(info)
                 self.successRequest.accept(())
                 self.userInfo.accept(info)
             })
@@ -100,7 +98,6 @@ final class ProfileViewModel: ViewModelType {
             .asSignal()
             .emit(onNext: { [weak self] repos in
                 guard let self = self else { return }
-                print(repos[0].fullName, self.currentPage)
                 let list = (self.currentPage == 1) ? repos : self.repoList.value + repos
                 self.resetLoadingAction()
                 self.repoList.accept(list)

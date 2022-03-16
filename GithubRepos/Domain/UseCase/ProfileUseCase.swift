@@ -47,7 +47,6 @@ extension ProfileUseCase {
             guard let self = self else { return }
             switch response {
             case .success(let userRepos):
-                print("응답 받아온 값-->", userRepos[0].fullName)
                 self.successReqeustUserRepos.accept(userRepos)
             case .failure(let error):
                 self.failGithubError.accept(error)
