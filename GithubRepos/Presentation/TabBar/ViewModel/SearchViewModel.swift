@@ -90,6 +90,7 @@ final class SearchViewModel: ViewModelType {
             .asSignal()
             .do { [weak self]  _ in
                 self?.resetLoadingAction()
+                ProgressHUD.show("네트워크 오류", icon: .failed, interaction: false)
             }
             .map { _ in [] }
             .emit(to: repoList)
