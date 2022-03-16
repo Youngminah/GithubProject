@@ -33,7 +33,6 @@ final class SearchViewController: BaseViewController {
             case .firstItem(let item):
                 let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryCell.identifier) as! RepositoryCell
                 cell.configure(item: item)
-
                 return cell
             }
         })
@@ -129,5 +128,18 @@ extension SearchViewController {
 
     @objc func hideKeyboard() {
         view.endEditing(true)
+    }
+}
+
+extension SearchViewController: AuthDelegate {
+
+    func login() {
+        print("SearchViewController login")
+        tableView.reloadData()
+    }
+
+    func logout() {
+        print("SearchViewController logout")
+        tableView.reloadData()
     }
 }

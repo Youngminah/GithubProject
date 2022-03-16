@@ -143,3 +143,25 @@ extension ProfileViewController: UITableViewDelegate {
         return 180
     }
 }
+
+extension ProfileViewController: AuthDelegate {
+
+    func login() {
+        print("ProfileViewController login")
+        loginDescriptionView.removeFromSuperview()
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints { make in
+            make.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+        viewDidLoadEvent.accept(())
+    }
+
+    func logout() {
+        print("ProfileViewController logout")
+        tableView.removeFromSuperview()
+        view.addSubview(loginDescriptionView)
+        loginDescriptionView.snp.makeConstraints { make in
+            make.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+    }
+}
