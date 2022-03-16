@@ -9,23 +9,13 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-protocol SearchUseCase {
-
-    var successReqeustSearch: PublishRelay<Repos> { get set }
-    var successReqeustStar: PublishRelay<Void> { get set }
-    var successReqeustUnstar: PublishRelay<Void> { get set }
-    var failGithubError: PublishRelay<GithubServerError> { get set }
-
-    func requestSearch(searchName: String, page: Int)
-}
-
-final class DefaultAuthUseCase {
+final class DefaultAuthUseCase: AuthUseCase {
 
     private let authRepository: AuthRepositoryType
     private let disposeBag = DisposeBag()
 
-    let successLogin = PublishRelay<Void>()
-    let failGithubError = PublishRelay<GithubServerError>()
+    var successLogin = PublishRelay<Void>()
+    var failGithubError = PublishRelay<GithubServerError>()
 
     init(
         authRepository: AuthRepositoryType

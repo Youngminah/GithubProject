@@ -9,23 +9,15 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-protocol DefautProfileUseCase {
-
-    var successLogin: PublishRelay<Void> { get set }
-    var failGithubError: PublishRelay<GithubServerError> { get set }
-
-    func requestLogin(code: String)
-}
-
-final class DefaultProfileUseCase {
+final class DefaultProfileUseCase: ProfileUseCase {
 
     private let githubRepository: GithubRepositoryType
     private let disposeBag = DisposeBag()
 
     var successReqeustUserInfo = PublishRelay<UserInfo>()
     var successReqeustUserRepos = PublishRelay<[RepoItem]>()
-    let successUnstarred = PublishRelay<Void>()
-    let failGithubError = PublishRelay<GithubServerError>()
+    var successUnstarred = PublishRelay<Void>()
+    var failGithubError = PublishRelay<GithubServerError>()
 
     init(
         githubRepository: GithubRepositoryType
