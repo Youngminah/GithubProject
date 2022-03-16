@@ -11,14 +11,15 @@ import RxDataSources
 import RxSwift
 import SnapKit
 
-final class ProfileViewController: BaseViewController {
+final class ProfileViewController: UIViewController {
 
     private let refreshControl = UIRefreshControl()
     private let headerView = ProfileHeaderView()
     private let tableView = UITableView(frame: .zero, style: .insetGrouped)
+    private let loginDescriptionView = EmptyBackgroundView(title: "로그인이\n필요합니다.", imageName: "eye.slash")
 
     private lazy var input = ProfileViewModel.Input(
-        viewDidLoad: viewDidLoadEvent.asObservable(),
+        viewDidLoad: viewDidLoadEvent.asSignal(),
         pullRefresh: refreshControl.rx.controlEvent(.valueChanged).asSignal(),
         didScrollToBottom: tableView.rx.didScrollToBottom.asSignal(onErrorJustReturn: ())
     )
@@ -53,6 +54,8 @@ final class ProfileViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setConfigurations()
+        setViews()
         bind()
     }
 
@@ -108,20 +111,21 @@ final class ProfileViewController: BaseViewController {
         viewDidLoadEvent.accept(())
     }
 
-    override func setViews() {
-        super.setViews()
-        view.addSubview(tableView)
-    }
-
-    override func setConstraints() {
-        super.setConstraints()
-        tableView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
+    private func setViews() {
+        if UserDefaults.standard.string(forKey: "accessToken") != nil {
+            view.addSubview(tableView)
+            tableView.snp.makeConstraints { make in
+                make.edges.equalTo(view.safeAreaLayoutGuide)
+            }
+        } else {
+            view.addSubview(loginDescriptionView)
+            loginDescriptionView.snp.makeConstraints { make in
+                make.edges.equalTo(view.safeAreaLayoutGuide)
+            }
         }
     }
-
-    override func setConfigurations() {
-        super.setConfigurations()
+    
+    private func setConfigurations() {
         tableView.register(RepositoryCell.self,
                            forCellReuseIdentifier: RepositoryCell.identifier)
         tableView.register(ProfileHeaderView.self,
