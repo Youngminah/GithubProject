@@ -28,11 +28,12 @@ final class ProfileUseCase {
 
 extension ProfileUseCase {
 
-    func requestUserInfo(owners: String) {
-        self.githubRepository.requestUserInfo(owners: owners) { [weak self] response in
+    func requestUserInfo() {
+        self.githubRepository.requestUserInfo() { [weak self] response in
             guard let self = self else { return }
             switch response {
             case .success(let userInfo):
+                UserDefaults.standard.set(userInfo.userId, forKey: "userId")
                 self.successReqeustUserInfo.accept(userInfo)
             case .failure(let error):
                 self.failGithubError.accept(error)
@@ -40,7 +41,8 @@ extension ProfileUseCase {
         }
     }
 
-    func requestUserStarredRepos(owners: String, page: Int) {
+    func requestUserStarredRepos(page: Int) {
+        let owners = UserDefaults.standard.string(forKey: "userId")!
         self.githubRepository.requestUserStarredRepos(owners: owners, page: page) { [weak self] response in
             guard let self = self else { return }
             switch response {
