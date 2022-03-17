@@ -40,8 +40,6 @@ class SearchViewModelTests: XCTestCase {
     }
 
     func test_Search_Success_Case() throws {
-        //let  = self.scheduler.createObserver(Bool.self)
-
         let refreshTestableObservable = self.scheduler.createHotObservable([
                     .next(0, ())
                 ])
@@ -68,7 +66,7 @@ class SearchViewModelTests: XCTestCase {
             .disposed(by: self.disposeBag)
 
         scheduler.start()
-        print(repoListObserver.events)
+        
         XCTAssertEqual(repoListObserver.events, [
             .next(0, []),
             .next(10, []), // 백그라운드 배경을 띄우려고 나온 빈배열

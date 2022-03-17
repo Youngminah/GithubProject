@@ -111,7 +111,7 @@ extension GithubRepository {
         case .success(let response):
             completion(.success(response.statusCode))
         case .failure(let error):
-            completion(.failure(GithubServerError(rawValue: error.response!.statusCode) ?? .unknown))
+            completion(.failure(GithubServerError(rawValue: error.response?.statusCode ?? -1) ?? .unknown))
         }
     }
 }

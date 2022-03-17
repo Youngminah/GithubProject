@@ -16,9 +16,7 @@ final class MockSearchUseCase: SearchUseCase {
     var successReqeustSearch = PublishRelay<Repos>()
     var failGithubError = PublishRelay<GithubServerError>()
 
-    init() {
-
-    }
+    init() { }
 
     func requestSearch(searchName: String, page: Int) {
         if page < 30 && page > 0 {
@@ -33,6 +31,4 @@ final class MockSearchUseCase: SearchUseCase {
             self.failGithubError.accept(.unknown)
         }
     }
-
-
 }

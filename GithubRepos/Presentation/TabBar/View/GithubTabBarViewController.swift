@@ -54,7 +54,6 @@ final class GithubTabBarViewController: UITabBarController, UITabBarControllerDe
         guard let code = notification.object as? String else {
             return
         }
-        print("키득키득-->", code)
         self.requestLogin.accept(code)
     }
 
@@ -84,7 +83,6 @@ final class GithubTabBarViewController: UITabBarController, UITabBarControllerDe
         title = "Github"
         loginBarButton.title = "로그인"
         logoutBarButton.title = "로그아웃"
-
         if UserDefaults.standard.string(forKey: "accessToken") != nil {
             setLogoutBarButton()
         } else {
@@ -103,6 +101,11 @@ final class GithubTabBarViewController: UITabBarController, UITabBarControllerDe
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         guard let vc = self.selectedViewController as? AuthDelegate else {
             return
+        }
+        if UserDefaults.standard.string(forKey: "accessToken") != nil {
+            vc.login()
+        } else {
+            vc.logout()
         }
         self.authDelegate = vc
     }

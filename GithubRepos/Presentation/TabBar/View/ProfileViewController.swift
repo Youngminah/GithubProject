@@ -43,6 +43,8 @@ final class ProfileViewController: UIViewController {
             }
         })
 
+    private var isFirstLoad = true
+
     init(viewModel: ProfileViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -100,6 +102,7 @@ final class ProfileViewController: UIViewController {
         output.failRequestAction
             .do { [weak self] _ in
                 guard let self = self else { return }
+                self.isFirstLoad = true
                 self.tableView.tableHeaderView = nil
             }
             .map { return true }
@@ -152,12 +155,17 @@ extension ProfileViewController: AuthDelegate {
 
     func login() {
         print("ProfileViewController login")
-        loginDescriptionView.removeFromSuperview()
-        view.addSubview(tableView)
-        tableView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
+        if UserDefaults.standard.string(forKey: "accessToken") != nil {
+            loginDescriptionView.removeFromSuperview()
+            view.addSubview(tableView)
+            tableView.snp.makeConstraints { make in
+                make.edges.equalTo(view.safeAreaLayoutGuide)
+            }
+            if isFirstLoad {
+                viewDidLoadEvent.accept(())
+            }
+            isFirstLoad = false
         }
-        viewDidLoadEvent.accept(())
     }
 
     func logout() {
