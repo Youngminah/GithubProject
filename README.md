@@ -3,6 +3,8 @@
 </br>
 </br>
 
+###### 참고사항: Star를 <좋아요>로 생각하고 구현하였습니다.
+
 ### 요구사항 구현
 
 - [x] 깃허브 API 필수 사용 3가지
@@ -14,6 +16,7 @@
 - [x] Star눌렀을 때, 다른 화면간의 동기화 (미흡)
 
 ### 요구사항 외의 추가적으로 구현사항
+- [x] 좋아요, 좋아요 취소,여부확인, 로그인 API 
 - [x] Pull Refresh 구현
 - [x] 다크모드 대응
 - [x] Topics 구현 (Self sizing 및 CollectionView Left align 이용)
