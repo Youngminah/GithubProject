@@ -15,12 +15,6 @@
 		BB6D589E27DC754F00C96487 /* GithubTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D589D27DC754F00C96487 /* GithubTabBarViewController.swift */; };
 		BB6D58A027DC77BE00C96487 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D589F27DC77BE00C96487 /* AppColor.swift */; };
 		BB6D58A627DC796D00C96487 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58A527DC796D00C96487 /* AppFont.swift */; };
-		BB6D58AD27DC7B4C00C96487 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D58A727DC7B4C00C96487 /* NotoSansKR-Black.otf */; };
-		BB6D58AE27DC7B4C00C96487 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D58A827DC7B4C00C96487 /* NotoSansKR-Regular.otf */; };
-		BB6D58AF27DC7B4C00C96487 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D58A927DC7B4C00C96487 /* NotoSansKR-Medium.otf */; };
-		BB6D58B027DC7B4C00C96487 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D58AA27DC7B4C00C96487 /* NotoSansKR-Light.otf */; };
-		BB6D58B127DC7B4C00C96487 /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D58AB27DC7B4C00C96487 /* NotoSansKR-Thin.otf */; };
-		BB6D58B227DC7B4C00C96487 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D58AC27DC7B4C00C96487 /* NotoSansKR-Bold.otf */; };
 		BB6D58B527DC7E2C00C96487 /* UIColor+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58B427DC7E2C00C96487 /* UIColor+Ex.swift */; };
 		BB6D58B727DC7E3700C96487 /* UIFont+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58B627DC7E3700C96487 /* UIFont+Ex.swift */; };
 		BB6D58B927DCC57700C96487 /* GithubTarget+StubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D58B827DCC57700C96487 /* GithubTarget+StubData.swift */; };
@@ -83,6 +77,12 @@
 		BB6D59CC27E2846000C96487 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D59CB27E2846000C96487 /* AuthUseCase.swift */; };
 		BB6D59CE27E2846A00C96487 /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D59CD27E2846A00C96487 /* SearchUseCase.swift */; };
 		BB6D59D227E2857B00C96487 /* MockSearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D59D127E2857B00C96487 /* MockSearchUseCase.swift */; };
+		BB6D59D927E3288D00C96487 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D59D327E3288D00C96487 /* NotoSansKR-Regular.otf */; };
+		BB6D59DA27E3288D00C96487 /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D59D427E3288D00C96487 /* NotoSansKR-Thin.otf */; };
+		BB6D59DB27E3288D00C96487 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D59D527E3288D00C96487 /* NotoSansKR-Bold.otf */; };
+		BB6D59DC27E3288D00C96487 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D59D627E3288D00C96487 /* NotoSansKR-Medium.otf */; };
+		BB6D59DD27E3288D00C96487 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D59D727E3288D00C96487 /* NotoSansKR-Black.otf */; };
+		BB6D59DE27E3288D00C96487 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB6D59D827E3288D00C96487 /* NotoSansKR-Light.otf */; };
 		BBFA000027DB871B00897CEE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAFFFF27DB871B00897CEE /* Coordinator.swift */; };
 		BBFA000227DB872700897CEE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000127DB872700897CEE /* AppCoordinator.swift */; };
 		BBFA000427DB873E00897CEE /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */; };
@@ -124,12 +124,6 @@
 		BB6D589D27DC754F00C96487 /* GithubTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubTabBarViewController.swift; sourceTree = "<group>"; };
 		BB6D589F27DC77BE00C96487 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		BB6D58A527DC796D00C96487 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
-		BB6D58A727DC7B4C00C96487 /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Black.otf"; path = "../../../../font/NotoSansKR-Black.otf"; sourceTree = "<group>"; };
-		BB6D58A827DC7B4C00C96487 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Regular.otf"; path = "../../../../font/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
-		BB6D58A927DC7B4C00C96487 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Medium.otf"; path = "../../../../font/NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
-		BB6D58AA27DC7B4C00C96487 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Light.otf"; path = "../../../../font/NotoSansKR-Light.otf"; sourceTree = "<group>"; };
-		BB6D58AB27DC7B4C00C96487 /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Thin.otf"; path = "../../../../font/NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
-		BB6D58AC27DC7B4C00C96487 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Bold.otf"; path = "../../../../font/NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		BB6D58B427DC7E2C00C96487 /* UIColor+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ex.swift"; sourceTree = "<group>"; };
 		BB6D58B627DC7E3700C96487 /* UIFont+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ex.swift"; sourceTree = "<group>"; };
 		BB6D58B827DCC57700C96487 /* GithubTarget+StubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GithubTarget+StubData.swift"; sourceTree = "<group>"; };
@@ -186,6 +180,12 @@
 		BB6D59CB27E2846000C96487 /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
 		BB6D59CD27E2846A00C96487 /* SearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
 		BB6D59D127E2857B00C96487 /* MockSearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchUseCase.swift; sourceTree = "<group>"; };
+		BB6D59D327E3288D00C96487 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Regular.otf"; path = "../../../../폰트/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
+		BB6D59D427E3288D00C96487 /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Thin.otf"; path = "../../../../폰트/NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
+		BB6D59D527E3288D00C96487 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Bold.otf"; path = "../../../../폰트/NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
+		BB6D59D627E3288D00C96487 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Medium.otf"; path = "../../../../폰트/NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
+		BB6D59D727E3288D00C96487 /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Black.otf"; path = "../../../../폰트/NotoSansKR-Black.otf"; sourceTree = "<group>"; };
+		BB6D59D827E3288D00C96487 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Light.otf"; path = "../../../../폰트/NotoSansKR-Light.otf"; sourceTree = "<group>"; };
 		BBFA000127DB872700897CEE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BBFA000327DB873E00897CEE /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		BBFAFFC827DB813F00897CEE /* GithubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -507,12 +507,12 @@
 		BBFA000827DB87A200897CEE /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				BB6D58A727DC7B4C00C96487 /* NotoSansKR-Black.otf */,
-				BB6D58AC27DC7B4C00C96487 /* NotoSansKR-Bold.otf */,
-				BB6D58AA27DC7B4C00C96487 /* NotoSansKR-Light.otf */,
-				BB6D58A927DC7B4C00C96487 /* NotoSansKR-Medium.otf */,
-				BB6D58A827DC7B4C00C96487 /* NotoSansKR-Regular.otf */,
-				BB6D58AB27DC7B4C00C96487 /* NotoSansKR-Thin.otf */,
+				BB6D59D727E3288D00C96487 /* NotoSansKR-Black.otf */,
+				BB6D59D527E3288D00C96487 /* NotoSansKR-Bold.otf */,
+				BB6D59D827E3288D00C96487 /* NotoSansKR-Light.otf */,
+				BB6D59D627E3288D00C96487 /* NotoSansKR-Medium.otf */,
+				BB6D59D327E3288D00C96487 /* NotoSansKR-Regular.otf */,
+				BB6D59D427E3288D00C96487 /* NotoSansKR-Thin.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -814,14 +814,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB6D58B027DC7B4C00C96487 /* NotoSansKR-Light.otf in Resources */,
-				BB6D58B127DC7B4C00C96487 /* NotoSansKR-Thin.otf in Resources */,
-				BB6D58B227DC7B4C00C96487 /* NotoSansKR-Bold.otf in Resources */,
-				BB6D58AD27DC7B4C00C96487 /* NotoSansKR-Black.otf in Resources */,
+				BB6D59DC27E3288D00C96487 /* NotoSansKR-Medium.otf in Resources */,
+				BB6D59DA27E3288D00C96487 /* NotoSansKR-Thin.otf in Resources */,
+				BB6D59DE27E3288D00C96487 /* NotoSansKR-Light.otf in Resources */,
 				BBFAFFD827DB814100897CEE /* LaunchScreen.storyboard in Resources */,
-				BB6D58AF27DC7B4C00C96487 /* NotoSansKR-Medium.otf in Resources */,
-				BB6D58AE27DC7B4C00C96487 /* NotoSansKR-Regular.otf in Resources */,
+				BB6D59D927E3288D00C96487 /* NotoSansKR-Regular.otf in Resources */,
 				BBFAFFD527DB814100897CEE /* Assets.xcassets in Resources */,
+				BB6D59DD27E3288D00C96487 /* NotoSansKR-Black.otf in Resources */,
+				BB6D59DB27E3288D00C96487 /* NotoSansKR-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
