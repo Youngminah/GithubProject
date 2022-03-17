@@ -279,6 +279,8 @@ class GithubReposUITests: XCTestCase {
 }
 ```
 ![image](https://user-images.githubusercontent.com/42762236/158711748-06344620-7cf6-4c86-990c-174d0f0dd46a.png)
+![image](https://user-images.githubusercontent.com/42762236/158711977-d76fd8ea-5d74-4561-ac5d-f3e093c5ac2f.png)
+
 - 테스트 성공!
 
 ### UITest 실행 화면
