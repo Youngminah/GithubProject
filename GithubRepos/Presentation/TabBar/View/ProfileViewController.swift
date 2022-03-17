@@ -154,7 +154,6 @@ extension ProfileViewController: UITableViewDelegate {
 extension ProfileViewController: AuthDelegate {
 
     func login() {
-        print("ProfileViewController login")
         if UserDefaults.standard.string(forKey: "accessToken") != nil {
             loginDescriptionView.removeFromSuperview()
             view.addSubview(tableView)
@@ -169,7 +168,6 @@ extension ProfileViewController: AuthDelegate {
     }
 
     func logout() {
-        print("ProfileViewController logout")
         tableView.removeFromSuperview()
         view.addSubview(loginDescriptionView)
         loginDescriptionView.snp.makeConstraints { make in

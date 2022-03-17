@@ -134,12 +134,10 @@ extension SearchViewController {
 extension SearchViewController: AuthDelegate {
 
     func login() {
-        print("SearchViewController login")
         tableView.reloadData()
     }
 
     func logout() {
-        print("SearchViewController logout")
         tableView.reloadData()
     }
 }
