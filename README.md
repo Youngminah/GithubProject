@@ -56,6 +56,7 @@ https://user-images.githubusercontent.com/42762236/158707543-9b3c718a-9ec3-49f5-
 - 간단한 ViewModel에 관한 테스트 코드를 작성해보았다.
 - 이를 위해 아키텍쳐적으로 의존성을 외부에서 주입하고, 
 - 인터페이스 (프로토콜)을 사용한 부분이 테스트 코드에서 매우 편리하게 작용하였다.
+- RxTest를 이용한 테스트코드를 작성하였음!
 </br>
 
 ### SearchViewModel 테스트 코드 작성을 위한 선행 작업 
@@ -237,10 +238,51 @@ class SearchViewModelTests: XCTestCase {
 ![image](https://user-images.githubusercontent.com/42762236/158710830-25821188-6869-437b-8251-076d552c5804.png)
 - 테스트 코드 성공 모습
 
+</br>
+</br>
 
 
+## 간단한 UITest 코드 작성
 
+- UITest코드는 아주 기초만 써보았슴
 
+### UITest 코드
+```swift
+import XCTest
+
+class GithubReposUITests: XCTestCase {
+
+    override func setUpWithError() throws {
+        continueAfterFailure = false
+    }
+
+    override func tearDownWithError() throws {
+    }
+
+    func testSearchRepositoryFlow() throws {
+        let app = XCUIApplication()
+        app.launch()
+        let searchField = app.otherElements["searchBar"]
+        searchField.tap()
+        searchField.typeText("Youngminah")
+        app.buttons["searchButton"].tap()
+    }
+
+    func testLaunchPerformance() throws {
+        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
+            // This measures how long it takes to launch your application.
+            measure(metrics: [XCTApplicationLaunchMetric()]) {
+                XCUIApplication().launch()
+            }
+        }
+    }
+}
+```
+![image](https://user-images.githubusercontent.com/42762236/158711748-06344620-7cf6-4c86-990c-174d0f0dd46a.png)
+- 테스트 성공!
+
+### UITest 실행 화면
+https://user-images.githubusercontent.com/42762236/158711822-56702268-ea28-4a4d-b50a-abe5157c0b31.mp4
 
 </br>
 </br>
