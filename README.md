@@ -1,4 +1,4 @@
-# 29cm 과제 구현
+# Github Project 
 
 
 ###### 참고사항: Star를 <좋아요>로 생각하고 구현하였습니다.
@@ -182,7 +182,7 @@ class SearchViewModelTests: XCTestCase {
     private var output: SearchViewModel.Output!
 
     private let dummyData = [
-        RepoItem(id: 1, fullName: "29cmGodRepos/kingkinggod", description: nil, topics: ["29likes", "29king", "29godofkingking"], star: 1000, fork: 2, language: "Swift", updatedAt: Date())
+        RepoItem(id: 1, fullName: "GodRepos/kingkinggod", description: nil, topics: ["likes", "king", "godofkingking"], star: 1000, fork: 2, language: "Swift", updatedAt: Date())
     ]
 
     override func setUpWithError() throws {
@@ -209,7 +209,7 @@ class SearchViewModelTests: XCTestCase {
                 ])
 
         let textTestableObservable = self.scheduler.createHotObservable([
-            .next(10, "29cm")
+            .next(10, "cm")
         ])
 
         let repoListObserver = self.scheduler.createObserver([RepoItem].self)
